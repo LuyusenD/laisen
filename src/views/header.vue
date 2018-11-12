@@ -1,0 +1,217 @@
+<template>
+    <div id="header">
+      <div>
+        <img src="../image/logo.png" alt="">
+      </div>
+      <div>
+        <ul class="nav_ul">
+          <li><router-link to="/" active-class="active" exact>首页</router-link></li>
+          <li><router-link to="/products" active-class="active" @mousemove="nav(1)">PRODUCTS</router-link></li>
+          <li><router-link to="/Details"  @click.native="active()">SERVICE</router-link></li>
+          <li><router-link to="/">ABOUT US</router-link></li>
+          <li><router-link to="/">DEALER</router-link></li>
+        </ul>
+        <div id="iphone_list">
+          <el-button icon="el-icon-more-outline" @click="phone_nav()"  ></el-button>
+          <ul class="iphone_nav">
+            <li><router-link to="/" active-class="active" exact>首页</router-link></li>
+            <li><router-link to="/products" active-class="active">PRODUCTS</router-link></li>
+            <li><router-link to="/"  @click.native="active()">SERVICE</router-link></li>
+            <li><router-link to="/">ABOUT US</router-link></li>
+            <li><router-link to="/">DEALER</router-link></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</template>
+
+<script>
+export default{
+    data(){return{}},
+    created(){
+    },
+    mounted(){
+    },
+    methods:{
+        phone_nav(){
+            $('.iphone_nav').slideToggle()
+        },
+        nav(index){
+          $('.nav_ul>li').each((i,val)=>{
+            if(i==index){
+              /*$(val).text('产品中心')*/
+              console.log(1)
+              
+            }
+          })
+        }
+    }
+}
+</script>
+
+<style scoped>
+ul,li,div,a,p{
+  padding:0;margin:0
+ }
+a{
+  color:#000;
+  text-decoration:none;
+ }
+li{list-style: none;}
+.nav_ul a{
+  transition:1s
+}
+#iphone_list,#iphone_list>ul{
+  display:none
+ }
+#header{
+  width:100%;
+  height:120px;
+  background:#fec836;
+  font-size:20px;
+  position:relative;
+ }
+#header>div:nth-child(1)>img{
+  margin-top:36px;
+  margin-left:450px;
+ }
+#header>div:nth-child(1){
+  position: absolute;
+ }
+#header>div:nth-child(2){
+  float:right;
+  margin-right:70px;
+ }
+
+#header>div>ul>li>a.active::before{
+  z-index: 1;
+  position: absolute;
+  display:block;
+  top: 40px;
+  left: 0;
+  width:100%;
+  height:2px;
+  background:#fff;
+  content:'';
+  transition:.5s;
+ }
+#header>div>ul>li>a.active{
+  color:#fff;
+ }
+#header>div>ul>li{
+  margin-top:60px; 
+  margin-right:60px;
+  float:left;
+  font-weight: 700;
+  position:relative;
+ }
+#header>div>ul>li:hover:before{
+  width:100%;
+ }
+#header>div>ul>li::before{
+  z-index: 1;
+  position: absolute;
+  display:block;
+  top: 40px;
+  left: 0;
+  width:0px;
+  height:2px;
+  background:#fff;
+  content:'';
+  transition:.5s;
+ } 
+
+
+ @media (max-width:1766px){
+  #header>div:nth-child(1)>img{
+  margin-top:36px;
+  margin-left:180px;
+ }
+ }
+
+@media (max-width:1660px){
+  #header>div:nth-child(1)>img{
+  margin-top:36px;
+  margin-left:140px;
+ }
+ }
+@media (max-width:1290px){
+  #header>div:nth-child(1)>img{
+  margin-top:36px;
+  margin-left:140px;
+ }
+ }
+@media (max-width:1264px){
+  #header>div>ul>li{
+    margin-right:40px;
+  }
+ }
+@media (max-width:1156px){
+  #header>div>ul>li{
+    margin-right:30px;
+  }
+ }
+@media (max-width:1024px){
+  #header>div>ul>li{
+    margin-right:20px;
+  }
+  #header>div:nth-child(1)>img{
+  margin-top:36px;
+  margin-left:80px;
+ }
+ #header>div:nth-child(2){
+   margin-right:50px;
+ }
+
+ }
+@media (max-width:860px){
+ #header>div>ul>li{
+    margin-right:15px;
+  }
+  #header>div:nth-child(1)>img{
+  margin-top:36px;
+  margin-left:30px;
+ }
+ #header>div:nth-child(2){
+   margin-right:0px;
+ }
+ }
+@media (max-width:414px){
+ #header{
+  height:60px;
+  }
+ #header>div>ul>li{
+    display:none;
+  }
+ #header>div:nth-child(1)>img{
+  margin:14px 0 0 10px;
+  width:50%;
+  }
+ #header #iphone_list{
+  display:block;
+  }
+ #header #iphone_list button{
+  margin:10px 10px 0;
+  width:40px;
+  padding: 10px 10px 10px 10px;
+  border:1px solid rgba(0,0,0,.1);
+  background:rgba(0,0,0,0)
+  }
+ #header #iphone_list ul{
+    position:absolute;
+    top:60px;
+    z-index: 3;
+    width:100%;
+    left:0;
+    text-align:center;
+    background:rgba(29, 29, 29, 0.5)
+  }
+ #header #iphone_list ul>li{
+    padding: 10px 0;
+    margin-bottom: 3px;
+    border:1px solid #ddd;
+    background:rgba(255,255,255,.5);
+    box-sizing:border-box;
+  }
+}
+</style>
