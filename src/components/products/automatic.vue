@@ -81,4 +81,21 @@
       position:relative;
       bottom: 26px;
   }
+
+
+
+  @media (max-width:414px){
+
+    .shop>div>div.shop_text{
+        font-size:16px!important;
+        width:100%;
+        margin:0;
+        left:0;
+        top:0
+    }
+    .shop>div>div.shop_text span{
+        font-size:16px!important;
+        bottom: 0;
+    }
+}
 </style>

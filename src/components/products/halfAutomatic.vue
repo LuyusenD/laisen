@@ -96,4 +96,49 @@
       justify-content: space-between;
       margin-top: 46px;
   }
+@media (max-width:1024px){
+    .shop_two_img img{
+        width:150px;
+        height:150px;
+    }
+    .shop_two>div:nth-child(2){
+      padding:104px 0 0 76px;
+      font-family:'方正兰亭超细黑简体','宋体','黑体';
+      font-size:46px;
+      width:904px;
+  }
+}
+@media (max-width:414px){
+    /*不满意更改此*/
+    .shop_two{
+        display:block!important;
+        text-align: center;
+        padding-top: 50px;
+        height:620px;
+    }
+    .shop_two>div>img{
+        width:220px;
+    }
+    .shop_two_img img{
+        width:100px;
+        height:100px;
+    }
+    .shop_two>div:nth-child(2){
+      padding:104px 0 0 76px;
+      font-family:'方正兰亭超细黑简体','宋体','黑体';
+      font-size:46px;
+      width:904px;
+  }
+    .shop_two>div:nth-child(2){
+        font-size:16px;
+        padding:0;
+        width:100%;
+        margin-top:-400px;
+        background:rgba(0,0,0,0.5);
+        color:#fff;
+    }
+    .shop_two>div:nth-child(2)>div>div{
+        top:0;
+    }
+}
 </style>

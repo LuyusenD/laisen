@@ -2,7 +2,7 @@
     <div id="Box_">
         <div id="banner">
             <div class="bann_img">
-                <el-carousel indicator-position="outside">
+                <el-carousel indicator-position="outside" @change='bann_change()'>
                     <el-carousel-item v-for="item in bannList" :key="item"><!---->
                       <img :src="item">
                     </el-carousel-item>
@@ -58,6 +58,8 @@ import shop_two from '../image/index/shop_bann/SL-D18yin.png'
 import shop_three from '../image/index/shop_bann/SL-K12zong.png'
 import banner_one from '../image/index/banner/1.png'
 import banner_two from '../image/index/banner/2.png'
+import banner_three from '../image/index/banner/3.png'
+import banner_four from '../image/index/banner/4.png'
 import grid_one from '../image/index/grid/4.png'
 import grid_two from '../image/index/grid/5.png'
 import grid_three from '../image/index/grid/6.png'
@@ -66,7 +68,7 @@ export default {
     data(){
       return {
           isOne:1,
-          bannList:[banner_one,banner_two],
+          bannList:[banner_one,banner_two,banner_three,banner_four],
           canvasId:['canv1','canv2','canv3'],
           gridList:[grid_one,grid_two,grid_three,grid_four],
           shopBannList:[
@@ -141,6 +143,9 @@ export default {
        Model_hide(){
            $('#Model_shop').fadeOut();
            this.shop=null;
+       },
+       bann_change(){
+           console.log(1)
        }
     },
     created(){
@@ -164,7 +169,7 @@ li.is-active .el-carousel__button{
     }
 .el-carousel__indicators--outside{
     position:absolute !important;
-    margin-left:-38px;
+    margin-left:-76px;
     }
 .shop_bann .shop_bann_item div.is-active{
     background-color:#fec836 !important;

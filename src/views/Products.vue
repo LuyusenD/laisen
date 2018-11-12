@@ -3,12 +3,18 @@
         <div class="shop_nav">
             <table></table>
             <p>Smart Password  Lock Series</p>
-            <ul>
-                <li @click="slide_shop($event,-0,1)" class="active">全自动系列</li>
-                <li @click="slide_shop($event,-1579,2)">半自动系列</li>
-                <li @click="slide_shop($event,-3158,3)">高档别墅系列</li>
-                <li @click="slide_shop($event,-4737,4)">玻璃门系列</li>
-            </ul>
+            <div>
+                <el-button icon="el-icon-arrow-left" @click="min_nav_L_R(-363,'-')" circle></el-button>
+                <div>
+                    <ul>
+                        <li @click="slide_shop($event,-0,1)" class="active">全自动系列</li>
+                        <li @click="slide_shop($event,-width,2)">半自动系列</li>
+                        <li @click="slide_shop($event,-width*2,3)">高档别墅系列</li>
+                        <li @click="slide_shop($event,-width*3,4)">玻璃门系列</li>
+                    </ul>
+                </div>
+                <el-button icon="el-icon-arrow-right" @click="min_nav_L_R(363,'+')" circle ></el-button>
+            </div>
         </div>
         <div class="shop_list">
             <div class="shop_small_box" >
@@ -29,6 +35,33 @@
                             <img src="../image/products/automatic/SL-A7.png"></a>
                             <p>SL-A7</p>
                         </div>
+                    </div>
+                    <div class="shop_phone_img">
+                        <el-button icon="el-icon-arrow-left" @click="phone_img($event,-240,'.phone_imgs0')" circle></el-button>
+
+                        <div class="shop_phone_ImgList">
+                            <div class="phone_imgs0">
+                                <div>
+                                    <a href="/details?id=1"><img src="../image/products/automatic/SL-A6.png"></a>
+                                    <p>SL-A6</p>
+                                </div>
+                                <div>
+                                    <a href="/details?id=3">
+                                    <img src="../image/products/automatic/SL-A8.png"></a>
+                                    <p>SL-A8</p>
+                                </div>
+                                <div>
+                                    <a href="/details?id=2">
+                                    <img src="../image/products/automatic/SL-A7.png"></a>
+                                    <p>SL-A7</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <el-button icon="el-icon-arrow-right" @click="phone_img($event,240,'.phone_imgs0')" circle></el-button>
+
+
                     </div>
                 </div>
                 <div class="SL_K">
@@ -51,17 +84,41 @@
                             <p>SL-K12</p>
                         </div>
                     </div>
+                    <div class="shop_phone_img">
+                        <el-button icon="el-icon-arrow-left" @click="phone_img($event,-240,'.phone_imgs1')" circle></el-button>
+                        <div class="shop_phone_ImgList">
+                            <div class="phone_imgs1">
+                                <div>
+                                    <img src="../image/products/half_automatic/SL-K10.png">
+                                    <p>SL-K10</p>
+                                </div>
+                                <div>
+                                    <img src="../image/products/half_automatic/SL-K10-1.png">
+                                    <p>SL-K10-1</p>
+                                </div>
+                                <div>
+                                    <img src="../image/products/half_automatic/SL-K11.png">
+                                    <p>SL-K11</p>
+                                </div>
+                                <div>
+                                    <img src="../image/products/half_automatic/SL-K12.png">
+                                    <p>SL-K12</p>
+                                </div>
+                            </div>
+                        </div>
+                        <el-button icon="el-icon-arrow-right" @click="phone_img($event,240,'.phone_imgs1')" circle></el-button>
+                    </div>
                 </div>
                 <div class="SL_V">
                     <span>SL_V 系列</span>
                     <div class="shop_img">
                         <div class="img_bot"></div>
                     </div>
-                    <div class="SLV_text">
+                    <div class="SLV_text" >
                         <div class="SLV_motai"></div>
-                        <div>
+                        <div class="SLV_">
                             <img src="../image/products/villa/SL-V8.png">
-                            <div>
+                            <div class="slv_box">
                                 <h1>SL_V8</h1>
                                 <div class="SLV_con">
                                     <p>华丽机身 流畅线条</p>
@@ -71,7 +128,23 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="SLV_phone">
+                            <img src="../image/products/villa/SL-V8.png">
+                            <div class="slv_box" >
+                                <h1>SL_V8</h1>
+                                <div class="">
+                                    <p>华丽机身 流畅线条</p>
+                                    <p>EXPLAIN OUR STRENGTH</p>
+                                    <p>诠释我们的实例</p>
+                                    <a href="javascript:;">了解更多》</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+
                     </div>
+                    
                 </div>
                 <div class="SL_V SL_D">
                     <span>SL_D 系列</span>
@@ -81,11 +154,24 @@
                     </div>
                     <div class="SLV_text">
                         <div class="SLV_motai"></div>
-                        <div>
+                        <div class="SLV_">
                             <img src="../image/products/glass/SL-D18.png">
-                            <div>
+                            <div class="slv_box">
                                 <h1>SL_D18</h1>
                                 <div class="SLV_con">
+                                    <p>小巧机身 高端智能</p>
+                                    <p>EXPLAIN OUR STRENGTH</p>
+                                    <p>诠释我们的实例</p>
+                                    <a href="javascript:;">了解更多》</a>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="SLV_phone">
+                            <img src="../image/products/glass/SL-D18.png">
+                            <div class="slv_box" >
+                                <h1>SL_D18</h1>
+                                <div class="">
                                     <p>小巧机身 高端智能</p>
                                     <p>EXPLAIN OUR STRENGTH</p>
                                     <p>诠释我们的实例</p>
@@ -111,15 +197,57 @@ import villa from '../components/products/villa.vue'
 import glass from '../components/products/glass.vue'
 export default{
     data(){return {
-        view:1
+        view:1,
+        width:1579
     }},
+    created(){
+        
+    },
+    mounted(){
+        this.width=parseInt($('#pro_box>.shop_list>div>div').css('width').slice(0,-2))
+    },
     methods:{
         slide_shop(e,i,v){
             $('.shop_nav li[class]').removeClass("active");
             e.target.className='active';
             $('.shop_small_box').animate({'left':i});
             this.view = v
-            console.log(this.view)
+            // console.log(this.view)
+        },
+        min_nav_L_R(i,addDel){
+            let button = $('#pro_box>.shop_nav>div .el-button')
+            let ul = $('#pro_box>.shop_nav ul')
+            let left = parseInt(ul.css("left").slice(0,-2))
+            if(addDel=='+'&&left>=0){
+                ul.stop().animate({'left':'0px'})
+                return
+            }
+            let del = (ul.children().length-1)*-363
+            if(addDel=='-'&&left<=del){
+                ul.stop().animate({'left':del+'px'})
+                return
+            }
+            console.log()
+            button.attr({'disabled':'true'})
+            ul.stop().animate({'left':(left+i)+'px'})
+            setTimeout(function(){
+                button.removeAttr('disabled')
+            },300)
+        },
+        phone_img(e,i,elem){
+            let left = parseInt($(elem).css('left').slice(0,-2));
+            let imgList = $(elem);
+            let left_ = (imgList.children().length-1)*-240;
+            if(i==-240&&left<=left_){
+                imgList.stop().animate({"left":left_+'px'})
+                return
+            }
+            if(i==240&&left>=0){
+                imgList.stop().animate({"left":0+'px'})
+                return
+            }
+            imgList.stop().animate({"left":left+i+'px'})
+            
         }
     },
     components:{
@@ -132,12 +260,14 @@ export default{
 </script>
 
 <style scoped>
+/*scoped*/
   p,ul,li,a{
       text-decoration:none;
       list-style:none;
       padding:0;
       margin:0;
    }
+  #pro_box>.shop_nav>div .el-button,.shop_phone_img,.SLV_phone{display:none;}
   #pro_box>.shop_nav{
       height:800px;
       background:url(../image/products/7.png);
@@ -155,15 +285,34 @@ export default{
       width:1500px;
       height:60px;
       margin:0 auto;
+      left:0px;
    }
   #pro_box>.shop_nav li.active{
-      color:#fec836;
+      color:#fec836!important;
    }
   #pro_box>.shop_nav li{
       color:#9d9d9d;
       font-size:40px;
       float:left;
       padding: 0 84px 0 79px;
+      cursor: pointer;
+      position:relative;
+      /* bottom: 91px; */
+   }
+  #pro_box>.shop_nav li:nth-child(3){
+      color:#9d9d9d;
+      font-size:40px;
+      float:left;
+      padding: 0 84px 0 64px;
+      cursor: pointer;
+      position:relative;
+      /* bottom: 91px; */
+   }
+  #pro_box>.shop_nav li:nth-child(4){
+      color:#9d9d9d;
+      font-size:40px;
+      float:left;
+      padding: 0 64px 0 64px;
       cursor: pointer;
       position:relative;
       /* bottom: 91px; */
@@ -313,7 +462,7 @@ export default{
       position:absolute;
       text-align:center
    }
-  .shop_list .SLV_text .SLV_con a{
+  .shop_list .SLV_text .SLV_con a,.SLV_phone a{
       color:#000;
       background:#fff;
       padding:0px 14px;
@@ -347,6 +496,176 @@ export default{
       text-align:center
    }
 
+
+
+@media (max-width:1516px){
+  #pro_box>.shop_nav>div{
+      width:500px;
+      overflow: hidden;
+      margin:0 auto;
+      display:flex;
+      position: relative;
+    
+  }
+  #pro_box>.shop_nav>div>div{
+      width:363px;
+      overflow: hidden;
+      margin:0 auto;
+  }
+  #pro_box>.shop_nav li::before{
+      width:0;
+  }
+  #pro_box>.shop_nav>div .el-button{
+      display:inline-block;
+      margin: auto;
+      background: rgba(0,0,0,.5);
+      border:1px solid #fec836;
+  }
+
+  #pro_box>.shop_list>div>div{
+      width:1515px;
+   }
+ }
+@media (max-width:1415px){
+  #pro_box>.shop_list>div>div{
+      width:1415px;
+   }
+   #pro_box>.shop_list span{
+      left:-30px;
+   }
+ }
+@media (max-width:1315px){
+  #pro_box>.shop_list>div>div{
+      width:1315px;
+   }
+ }
+@media (max-width:1288px){
+  #pro_box>.shop_list>div>div{
+      width:1288px;
+   }
+  .shop_list .SL_K .shop_img{
+      justify-content: start !important;
+      margin:0 auto !important;
+      padding-top:200px;
+      width:700px !important;
+      overflow:hidden;
+  }
+  .shop_list .SL_K .shop_img>div{
+      padding:0 20px
+  }
+ }
+@media (max-width:1156px){
+   #pro_box>.shop_list>div>div{
+      width:1156px;
+   }
+   #pro_box>.shop_list .SL_A  .shop_img>div{
+       width:300px
+   }
+  
+ }
+  
+@media (max-width:1024px){
+  #pro_box>.shop_list>div>div{
+      width:1024px;
+   }
+  .slv_box{
+      left:-10px;
+  }
+ }
+
+@media (max-width:414px){
+ #pro_box>.shop_list{
+     height:736px;
+  }
+ #pro_box>.shop_nav>div{
+     width:414px;
+   }
+ #pro_box>.shop_list>div>div{
+     width:414px;
+  }
+ #pro_box>.shop_nav>div>div{
+     padding:0 84px 0 30px
+  }
+ #pro_box>.shop_nav>div>div li{
+     padding:0 100px 0 40px;
+  }
+ #pro_box>.shop_nav>div>div li:nth-child(2){
+     padding:0 80px 0 60px;
+  }
+ .shop_list span::before,.shop_list span::after{
+     width:0 !important;
+  }
+ #pro_box>.shop_list span{
+     left:0px;
+     top:10px;
+  }
+ 
+ #pro_box>.shop_list .shop_img{
+      margin-top:60px;
+  }
+.SL_A .shop_img,.SL_K .shop_img,.shop_text,.SLV_{
+    display:none !important;
+ }
+.shop_phone_img{
+    display:block;
+    width:320px;
+    height:600px;
+    margin:10px auto 0;
+    overflow:hidden;
+    display:flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position:relative;
+
+ }
+.shop_phone_img .el-button{
+    position:relative;
+
+    top:50%;
+    margin-top:-20px;
+ }
+.shop_phone_img img,.SLV_phone>img{
+    width:120px;
+    height:500px;
+    margin:20px 58px 0;
+ }
+.shop_phone_ImgList{
+     position:relative;
+     width:240px;
+     overflow: hidden;
+ }
+.shop_phone_ImgList>div{
+     /*设置left*/
+     display:flex;
+     position:relative;
+ }
+.slv_box{
+      left:0px;
+ }
+.shop_phone_ImgList p{
+     margin-left:0 !important;
+ }
+.SLV_phone{
+    display:block;
+    margin-top: 20px !important;
+    height:580px;
+    justify-content: center
+ }
+.slv_box{
+ background:rgba(0,0,0,0)!important;
+ z-index:2;
+ }
+.SLV_phone .slv_box>div{
+ margin-top:150px;
+ font-size:30px;
+ background:rgba(0,0,0,.4)
+ }
+
+
+
+
+
+}
    
 </style>
 

@@ -22,5 +22,16 @@
 <style>
   #app{
     width: 100% !important;
+    
+  }
+  @media (max-width:1024px) {
+    #app{
+      min-width: 1024px;
+    }
+  }
+  @media (max-width:414px) {
+    #app{
+      min-width: 100%;
+    }
   }
 </style>
