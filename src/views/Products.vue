@@ -68,19 +68,20 @@
                     <span>SL_K 系列</span>
                     <div class="shop_img">
                         <div>
-                            <img src="../image/products/half_automatic/SL-K10.png">
+                            <a href="/details?id=4"><img src="../image/products/half_automatic/SL-K10.png"></a>
                             <p>SL-K10</p>
                         </div>
                         <div>
-                            <img src="../image/products/half_automatic/SL-K10-1.png">
+                            <a href="/details?id=5"><img src="../image/products/half_automatic/SL-K10-1.png"></a>
+                            
                             <p>SL-K10-1</p>
                         </div>
                         <div>
-                            <img src="../image/products/half_automatic/SL-K11.png">
+                            <a href="/details?id=6"><img src="../image/products/half_automatic/SL-K11.png"></a>
                             <p>SL-K11</p>
                         </div>
                         <div>
-                            <img src="../image/products/half_automatic/SL-K12.png">
+                            <a href="/details?id=7"><img src="../image/products/half_automatic/SL-K12.png"></a>
                             <p>SL-K12</p>
                         </div>
                     </div>
@@ -89,19 +90,20 @@
                         <div class="shop_phone_ImgList">
                             <div class="phone_imgs1">
                                 <div>
-                                    <img src="../image/products/half_automatic/SL-K10.png">
+                                    <a href="/details?id=4"><img src="../image/products/half_automatic/SL-K10.png"></a>
                                     <p>SL-K10</p>
                                 </div>
                                 <div>
-                                    <img src="../image/products/half_automatic/SL-K10-1.png">
+                                    <a href="/details?id=5"><img src="../image/products/half_automatic/SL-K10-1.png"></a>
+                                    
                                     <p>SL-K10-1</p>
                                 </div>
                                 <div>
-                                    <img src="../image/products/half_automatic/SL-K11.png">
+                                    <a href="/details?id=6"><img src="../image/products/half_automatic/SL-K11.png"></a>
                                     <p>SL-K11</p>
                                 </div>
                                 <div>
-                                    <img src="../image/products/half_automatic/SL-K12.png">
+                                    <a href="/details?id=7"><img src="../image/products/half_automatic/SL-K12.png"></a>
                                     <p>SL-K12</p>
                                 </div>
                             </div>
@@ -117,14 +119,14 @@
                     <div class="SLV_text" >
                         <div class="SLV_motai"></div>
                         <div class="SLV_">
-                            <img src="../image/products/villa/SL-V8.png">
+                            <a href="/details?id=8"><img src="../image/products/villa/SL-V8.png"></a>
                             <div class="slv_box">
                                 <h1>SL_V8</h1>
                                 <div class="SLV_con">
                                     <p>华丽机身 流畅线条</p>
                                     <p>EXPLAIN OUR STRENGTH</p>
                                     <p>诠释我们的实例</p>
-                                    <a href="javascript:;">了解更多》</a>
+                                    <a href="/details?id=8">了解更多》</a>
                                 </div>
                             </div>
                         </div>
@@ -136,7 +138,7 @@
                                     <p>华丽机身 流畅线条</p>
                                     <p>EXPLAIN OUR STRENGTH</p>
                                     <p>诠释我们的实例</p>
-                                    <a href="javascript:;">了解更多》</a>
+                                    <a href="/details?id=8">了解更多》</a>
                                 </div>
                             </div>
                         </div>
@@ -149,20 +151,19 @@
                 <div class="SL_V SL_D">
                     <span>SL_D 系列</span>
                     <div class="shop_img">
-                        <img src="../image/products/glass/12.png">
                         <div class="img_bot"></div>
                     </div>
                     <div class="SLV_text">
                         <div class="SLV_motai"></div>
                         <div class="SLV_">
-                            <img src="../image/products/glass/SL-D18.png">
+                            <a href="/details?id=9"><img src="../image/products/glass/SL-D18.png"></a>
                             <div class="slv_box">
                                 <h1>SL_D18</h1>
                                 <div class="SLV_con">
                                     <p>小巧机身 高端智能</p>
                                     <p>EXPLAIN OUR STRENGTH</p>
                                     <p>诠释我们的实例</p>
-                                    <a href="javascript:;">了解更多》</a>
+                                    <a href="/details?id=9">了解更多》</a>
                                 </div>
                             </div>
                         </div>
@@ -175,7 +176,7 @@
                                     <p>小巧机身 高端智能</p>
                                     <p>EXPLAIN OUR STRENGTH</p>
                                     <p>诠释我们的实例</p>
-                                    <a href="javascript:;">了解更多》</a>
+                                    <a href="/details?id=9">了解更多》</a>
                                 </div>
                             </div>
                         </div>
@@ -267,7 +268,7 @@ export default{
       padding:0;
       margin:0;
    }
-  #pro_box>.shop_nav>div .el-button,.shop_phone_img,.SLV_phone{display:none;}
+  #pro_box>.shop_nav>div .el-button,.shop_phone_img,.shop_small_box>.SL_V>.SLV_text>.SLV_phone{display:none;}
   #pro_box>.shop_nav{
       height:800px;
       background:url(../image/products/7.png);
@@ -381,6 +382,7 @@ export default{
    }
  .SL_V .SLV_text img:hover{
       transform: scale(1.07);
+      
    }
   #pro_box>.shop_list .shop_img>div{
      width:420px;
@@ -437,8 +439,9 @@ export default{
    }
   .shop_list .SL_V .SLV_text img{
       margin-left:40px;
+   }
+  .shop_list .SL_V .SLV_text .SLV_>a{
       z-index: 1;
-
    }
   .shop_list .SL_V .SLV_text>div{
       position:relative;
@@ -640,13 +643,14 @@ export default{
      position:relative;
  }
 .slv_box{
-      left:0px;
+      top:0px;
+      left:0;
  }
 .shop_phone_ImgList p{
      margin-left:0 !important;
  }
 .SLV_phone{
-    display:block;
+    display:block!important;
     margin-top: 20px !important;
     height:580px;
     justify-content: center

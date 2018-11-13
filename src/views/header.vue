@@ -6,19 +6,19 @@
       <div>
         <ul class="nav_ul">
           <li><router-link to="/" active-class="active" exact>首页</router-link></li>
-          <li><router-link to="/products" active-class="active" @mousemove="nav(1)">PRODUCTS</router-link></li>
-          <li><router-link to="/Details"  @click.native="active()">SERVICE</router-link></li>
-          <li><router-link to="/">ABOUT US</router-link></li>
-          <li><router-link to="/">DEALER</router-link></li>
+          <li><router-link to="/products" active-class="active">PRODUCTS</router-link></li>
+          <li><router-link to="/Service" active-class="active" >SERVICE</router-link></li>
+          <li><router-link to="/About" active-class="active">ABOUT US</router-link></li>
+          <li><router-link to="/" >DEALER</router-link></li>
         </ul>
         <div id="iphone_list">
           <el-button icon="el-icon-more-outline" @click="phone_nav()"  ></el-button>
           <ul class="iphone_nav">
             <li><router-link to="/" active-class="active" exact>首页</router-link></li>
             <li><router-link to="/products" active-class="active">PRODUCTS</router-link></li>
-            <li><router-link to="/"  @click.native="active()">SERVICE</router-link></li>
-            <li><router-link to="/">ABOUT US</router-link></li>
-            <li><router-link to="/">DEALER</router-link></li>
+            <li><router-link to="/Service" active-class="active" >SERVICE</router-link></li>
+            <li><router-link to="/About" active-class="active">ABOUT US</router-link></li>
+            <li><router-link to="/" >DEALER</router-link></li>
           </ul>
         </div>
       </div>
@@ -36,15 +36,7 @@ export default{
         phone_nav(){
             $('.iphone_nav').slideToggle()
         },
-        nav(index){
-          $('.nav_ul>li').each((i,val)=>{
-            if(i==index){
-              /*$(val).text('产品中心')*/
-              console.log(1)
-              
-            }
-          })
-        }
+        
     }
 }
 </script>

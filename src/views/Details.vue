@@ -1,28 +1,37 @@
 <template>
     <div id="Details_box">
         <div class="nav">
-            全自动SL-A6 <div></div> <span>概述/详情</span>
+            {{cAs.type}}{{cAs.title}} <div></div> <span>概述/详情</span>
         </div>
         <div class="content">
             <div class="C_one">
                 <div>
-                    <img :src="cAs.lImg_01">
+                    <div class="fdj">
+                        <img  :src="imgUrl">
+                        <div></div>
+                        <span @mousemove="imgSize($event)" @mouseover="imgSizeOver()" @mouseout="imgSizeOut()"></span>
+                    </div>
                 </div>
                 <div>
-                    <ul>
+                    <ul @mousemove="imgtoggle($event)">
                         <li><el-button icon="el-icon-arrow-left" circle></el-button></li>
-                        <li class="active"><img :src="cAs.mImg_01"></li>
-                        <li><img :src="cAs.mImg_02"></li>
-                        <li><img :src="cAs.mImg_03"></li>
+                        <li class="active"><img :src="cAs.lImg_01"></li>
+                        <li><img :src="cAs.lImg_02"></li>
+                        <li><img :src="cAs.lImg_03"></li>
                         <li><el-button icon="el-icon-arrow-right" circle></el-button></li>
                     </ul>
                 </div>
             </div>
             <div class="C_two">
+               <div class="fdj_box">
+                   <img src="../image/products/shop/SL-A7/aa.png">
+               </div>
                <p>{{cAs.title}}</p>
                <div>
                    <span>产品配色</span>
-                   <a href="javascript:;"><i></i> {{cAs.color}}</a>
+                   <a href="javascript:;" v-for='i in cAs.color' :key={i}>
+                       <i :style="i=='红古铜'?'background:#d99e8d':i=='银灰色'?'background:#a0a0a0':'background:#000'"></i> {{i}}
+                   </a>
                </div>
                <span>购买可致电：0755-2107-8049</span>
             </div>
@@ -31,7 +40,7 @@
         <div class="shop_img">
             <!-- 介绍 -->
             <div>
-                <span>{{cAs.type}}</span>
+                <span>{{cAs.type}}<br><a href='javascript:;'>{{cAs.typedown}}</a> </span>
                 <div class="transDown"></div>
             </div>
             <div>
@@ -116,7 +125,8 @@ import Vuex from '@/Vuex.js'
 
 export default {
     data(){return{
-        cAs:{}
+        cAs:{},
+        imgUrl:null
     }},
     created(){
         let id = this.$route.query.id ;
@@ -124,14 +134,42 @@ export default {
         Vuex.state.details.map((obj)=>{
             if(obj.id==id){
                 _this.cAs = obj
+                _this.imgUrl=obj.lImg_01
             }
         })
         if(_this.cAs.id==undefined)alert('details 页面 404 ')
+    },
+    methods:{
+        imgtoggle(e){
+            if(e.target.nodeName=='IMG'){
+                $('.C_one li.active').removeClass('active')
+                e.target.parentElement.className='active'
+                this.imgUrl=e.target.src
+            }
+        },
+        imgSize(e){
+            let elX = $('.C_one>div>div>span').css('width').slice(0,-2)-125
+            let elY = $('.C_one>div>div>span').css('height').slice(0,-2)-100.7
+            let left = e.offsetX-125;
+            let top = e.offsetY-100.7;
+            e.offsetX<125?left = 0:e.offsetX>elX?left = elX-125:''
+            e.offsetY<100.7?top = 0:e.offsetY>elY?top = elY-100.7:''
+            $('.fdj>div').css({'left':left,'top':top})
+            
+            $('.fdj_box img').css('left',-1000*(left/(elX+125)))
+            $('.fdj_box img').css('top',-806*(top/(elY+100.7)))
+        },
+        imgSizeOver(){
+            $('.fdj>div').show()
+            $('.fdj_box').show()
+        },
+        imgSizeOut(){
+            $('.fdj>div').hide()
+            $('.fdj_box').hide()
+        }
     }
 }
 </script>
-
-
 
 
 <style scoped>
@@ -171,7 +209,7 @@ export default {
   .content>div{
       width:50%;
       height:792px;
-   }
+    }
   .content .C_one{
       text-align:center;
       padding-top:52px;
@@ -181,6 +219,11 @@ export default {
       margin:20px auto 0;
       width:650px;
    }
+   .C_one>div>div>img{
+       /*max*/
+       width:500px;
+       height:403px;
+   }
   .content .C_one li.active{
       border:2px solid #fec836;
    }
@@ -188,6 +231,11 @@ export default {
       margin: 0 3px;
       border:2px solid #b2b2b2;
       box-sizing: border-box;
+    }
+  .content .C_one>div:nth-child(2) img{
+       width:150px;
+       height:100px;
+
    }
   .content .C_one li:first-child,.content .C_one li:last-child{
       border:0;
@@ -269,23 +317,173 @@ export default {
   .shop_img .cAs p{
       font-size:36px;
    }
-   table{
+  table{
        width:970px;
        height:720px;
        text-align:start;
        box-sizing: border-box;
        font-size:24px;
    }
-   table td{
+  table td{
        border:1px solid #a9a9a9;
        padding-left:30px;
    }
-   table tr{
+  table tr{
        background:#d4d4d4;
        
    }
-   table tr:nth-child(2n){
+  table tr:nth-child(2n){
        background:#ffffff;
    }
+  
 
+@media (max-width:1310px){
+   .content .C_one>div:nth-child(1) img{
+       width: 80%;
+   }
+   .content .C_one>div:nth-child(2) img{
+       width: 120px;
+       height: 80px
+   }
+   .C_one>div>div{
+       width:95%!important;
+    }
+    .C_one>div>div>span,.C_one>div>div>div{
+        /*放大镜隐藏*/
+        display:none;
+    }
+   .content .C_one>div:nth-child(2) ul{
+       width:510px;
+       padding:0 0 0 10px
+   }
+   .content .C_two div>a{
+       width:350px;
+   }
+   .content>div{
+       height:680px
+   }
+   .content .C_two div{
+       height:270px
+   }
+ }
+@media (max-width:1210px){
+   .content .C_two div>a{
+       width:300px;
+       padding:10px 0;
+   }
+   .content>div{
+       height:600px
+   }
+   .content .C_two div{
+       height:240px
+   }
+ }
+@media (max-width:1110px){
+  .content .C_two div>a{
+       width:270px;
+       padding:10px 0;
+       font-size:22px
+   }
+  .content .C_two div>a i{
+       top:12px
+   }
+   .content>div{
+       height:550px
+   }
+   .content .C_two div{
+       height:200px
+   }
+ }
+@media (max-width:414px){
+ .nav>div{
+     display:none;
+ }
+ .nav>span{
+    margin-left:120px
+ }
+ .content{
+    flex-direction: column;
+    height:1000px;
+ }
+ .C_one,.C_two{
+     width:100%!important;
+ }
+
+ .content .C_one>div:nth-child(1) img{
+       width: 100%;
+ }
+ .content .C_one>div:nth-child(2) ul{
+       width:100%;
+       padding:0 0 0 10px
+   }
+ .C_one>div:nth-child(2) ul>li:first-child,.C_one>div:nth-child(2) ul>li:last-child{
+       display:none;
+   }
+ .C_two{
+     text-align:center;
+ }
+ .C_two,a{
+     margin:0 auto;
+ }
+ .shop_img,.shop_img img{
+     width:100% !important;
+ }
+ table{
+     width:100%;
+     font-size: 14px
+ }
+ table td{
+     padding:0 0 0 6px
+ }
+ .cAs p{
+     font-size: 26px
+ }
+
+
+}
+</style>
+
+<style scoped>
+/*放大镜*/
+.fdj>div,.content>.C_two>.fdj_box{
+    display:none;
+}
+.C_one>div>div{
+    position:relative;
+    width:500px;
+    margin:0 auto;
+}
+.C_one>div>div>div{
+    position: absolute;
+    width:250px;
+    height:201.5px;
+    background:rgba(255,200,54,.5);
+    top:0;
+    left:0;
+}
+.C_one>div>div>span{
+    display:block;
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+}
+.content>.C_two>.fdj_box{
+    position: absolute;
+    border:1px solid #ccc!important;
+    box-shadow:3px 3px 4px #ccc;
+    z-index:2;
+    width:500px;
+    height:403px;
+    top:52px;
+    left:-30px;
+    overflow:hidden;
+    
+}
+.fdj_box img{
+    width: 1000px;
+    top: 0;
+    left:0;
+    position: absolute;
+}
 </style>
