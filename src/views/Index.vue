@@ -2,11 +2,30 @@
     <div id="Box_">
         <div id="banner">
             <div class="bann_img">
-                <el-carousel indicator-position="outside" @change='bann_change()'>
+                <el-carousel indicator-position="outside" @change='bann_change()' :interval="5000" >
                     <el-carousel-item v-for="item in bannList" :key="item"><!---->
                       <img :src="item">
                     </el-carousel-item>
                 </el-carousel>
+                <div class="bann_text">
+                    <div class="bann_Tone">
+                        INTELLIGENT <br> LIFE <br> WITH YOU
+                        <p>莱森智联 懂你更懂家</p>
+                    </div> 
+                    <div class="bann_Ttwo">
+                        ARTISANAL <br> QUALITY
+                        <p>专注品质</p>
+                        <span>Focus on Quality</span>
+                    </div> 
+                    <div class="bann_Tthree">
+                        SMART LOCK <br> NEW <br> TRENDS
+                        <p>智能锁 新动向</p>
+                    </div>
+                    <div class="bann_Tfore">
+                        A KEY TO <br> OPEN <br> INTELLIGNT LIFE
+                        <p>锁好 家安 心更安</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="grid">
@@ -18,11 +37,6 @@
             <table></table>
             <div class="shop_bann_item">
                 <div class="shop_bann_con">
-                    <ul>
-                        <li></li>
-                        <li class="active"></li>
-                        <li></li>
-                    </ul>
                     <span>SMART PASSWORD LOCK</span>
                 </div>
                 <el-carousel :interval="4000" type="card" >
@@ -55,10 +69,10 @@ import 'element-ui/lib/theme-chalk/index.css'
 import shop_one from '../image/index/shop_bann/SL-A6.png'
 import shop_two from '../image/index/shop_bann/SL-D18yin.png'
 import shop_three from '../image/index/shop_bann/SL-K12zong.png'
-import banner_one from '../image/index/banner/1.png'
-import banner_two from '../image/index/banner/2.png'
-import banner_three from '../image/index/banner/3.png'
-import banner_four from '../image/index/banner/4.png'
+import banner_one from '../image/index/banner/5.png'
+import banner_two from '../image/index/banner/6.png'
+import banner_three from '../image/index/banner/7.png'
+import banner_four from '../image/index/banner/8.png'
 import grid_one from '../image/index/grid/4.png'
 import grid_two from '../image/index/grid/5.png'
 import grid_three from '../image/index/grid/6.png'
@@ -75,7 +89,8 @@ export default {
               {id:2,img:shop_two,title:'SL-D18',type:'玻璃锁'},
               {id:3,img:shop_three,title:'SL-K12',type:'半自动系列'}
           ],
-          shop:null
+          shop:null,
+          bann_index:-1
       }
     },
     methods:{
@@ -143,6 +158,36 @@ export default {
            this.shop=null;
        },
        bann_change(){
+           var i = $('.bann_img .el-carousel__container>div').index($('div.is-active.is-animating').next())
+           this.bann_index = i
+       },
+       bann_textC(){
+           let i = this.bann_index ;
+             if(i==-1){
+                $('.bann_Tone').show()
+                window.innerWidth<=500?
+                $('.bann_Tone').animate({'top':'30px','height':'180px','font-size':'22px','left':'120px'},1500):
+                $('.bann_Tone').animate({'top':'210px','height':'400px'},1500)
+                console.log(window.innerWidth)
+             }
+             if(i==1){
+                $('.bann_Ttwo').show()
+                window.innerWidth<=500?
+                $('.bann_Ttwo').animate({'top':'70px','height':'170px','width':'170px','font-size':'24px','left':'150px'},1500):
+                $('.bann_Ttwo').animate({'top':'230px','height':'400px'},1500)
+             }
+             if(i==2){
+                $('.bann_Tthree').show()
+                window.innerWidth<=500?
+                $('.bann_Tthree').animate({'top':'230px','height':'170px','width':'160px','font-size':'22px','left':'220px'},1500):
+                $('.bann_Tthree').animate({'top':'220px','height':'400px'},1500)
+             }
+             if(i==3){
+                $('.bann_Tfore').show()
+                window.innerWidth<=500?
+                $('.bann_Tfore').animate({'top':'100px','height':'170px','width':'180px','font-size':'22px','left':'180px'},1500):
+                $('.bann_Tfore').animate({'top':'230px','height':'400px'},1500)
+             }
        }
     },
     created(){
@@ -156,7 +201,15 @@ export default {
                 this.isOne=0
             }}
         })
+        this.bann_textC()
     },
+    watch:{
+        bann_index(){
+            $('.bann_text>div').hide()
+            $('.bann_text>div').css({'height':'50px','top':'140px'})
+            this.bann_textC()
+        }
+    }
     
 }
 </script>
@@ -218,6 +271,7 @@ li.is-active .el-carousel__button{
 </style>
 
 <style scoped>
+
 a{text-decoration:none;}
 li{float:left;list-style:none}
 p,ul,li{
@@ -226,7 +280,9 @@ p,ul,li{
 
 
 /*走马灯*/
-
+.bann_img{
+    position: relative;
+}
 .el-carousel__indicators{
     position:absolute;
     margin-left:-38px;
@@ -329,13 +385,14 @@ p,ul,li{
     box-sizing:border-box;
  }
 .shop_bann .shop_bann_con{
-    height:288px;
+    height:215px;
     display:flex;
     align-items:center;
     flex-flow:column wrap;
-    font-size:18px;
+    font-size:22px;
     color:#fff;
     position:relative;
+    top:80px;
  }
 .shop_bann .shop_bann_con span{
     position:relative;
@@ -353,7 +410,7 @@ p,ul,li{
     transition:.5s;
  }
 .shop_bann .shop_bann_con span::after{
-    left:275px;
+    left:325px;
  }
 .shop_bann .shop_bann_con li::before{
     top:4px;
@@ -398,9 +455,10 @@ p,ul,li{
     float:right;
 }
 
-@media (min-width:1766px){
+@media (min-width:1920px){
  #banner>.bann_img img{
       width:100%;
+      height:100%;
   }
  }
 @media (max-width:1766px){
@@ -463,13 +521,13 @@ p,ul,li{
 @media (max-width:414px){
   .counter{
     display:none;
-  }
+   }
   .shop_bann .shop_bann_con span:after,.shop_bann .shop_bann_con span:before,.shop_bann .shop_bann_con li::before{
       display:none !important;
-  }
+   }
   #banner{
       height:450px;
-  }
+   }
  .grid>div>img{
     height:100%;
     width:100%;
@@ -484,7 +542,7 @@ p,ul,li{
  } 
 .shop_bann,.shop_bann .shop_bann_item{
     height:667px ;
-}
+ }
 .shop_bann .shop_bann_con li{
     display:none;
  }
@@ -532,10 +590,64 @@ p,ul,li{
  }
 #Model_shop .Model_main .el-button{
     float:right;
+ }
+
+.bann_text{
+    position: absolute;
+    top:0;
+    left:5%;
+    width:0%;
+    height:90%;
+    z-index: 2;
 }
 
 
-
-
  }
+</style>
+
+<style scoped>
+/*bann Text style*/
+.bann_text{
+    position: absolute;
+    top:0;
+    left:5%;
+    width:90%;
+    height:90%;
+    z-index: 2;
+}
+
+.bann_text>div{
+    font-size:40px;
+    color:#fff;
+    position: absolute;
+    top:140px;
+    left:55%;
+    height:50px;
+    overflow: hidden;
+    display:none;
+    width:230px;
+}
+.bann_text>div.bann_Tone>p{
+    margin-top:60px;
+}
+.bann_text>div.bann_Ttwo>p{
+    margin-top:40px;
+    margin-bottom:-8px;
+}
+.bann_text>div.bann_Tthree{
+    color:#000;
+    margin-left:-30px;
+}
+.bann_text>div.bann_Tthree>p{
+    margin-top:40px;
+}
+.bann_text>div.bann_Tfore{
+    color:#000;
+}
+.bann_text>div.bann_Tfore>p{
+    margin-top:40px;
+}
+.bann_text>div span{
+   font-size:19px
+}
 </style>

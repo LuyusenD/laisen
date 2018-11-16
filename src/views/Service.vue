@@ -58,7 +58,7 @@ export default{
             if(!this.Start){return}
             let Topdown = 280;
             let WindowWidth = window.innerWidth;
-            WindowWidth>=1600?Topdown=280:WindowWidth>=1024?Topdown=230:WindowWidth>=414?Topdown=80:''
+            WindowWidth>=1600?Topdown=400:WindowWidth>=1024?Topdown=280:WindowWidth>=414?Topdown=80:''
             $('.bann>div>div').css({'margin-top':`${Topdown}px`,'opacity':'1'})
             $('.bann>div>p').css({'margin-top':'20px','opacity':'1'})
             

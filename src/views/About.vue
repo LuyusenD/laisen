@@ -60,17 +60,17 @@ export default{
                         goLeft<=1024?goLeft=goLeft+18:''
                         
                         bann.animate({'left':`-${goLeft-17}px`})
-                        $('#import').css('height','880px')
+                        $('#import').css('height','920px')
                         break;
                     case '联系我们':
                         goLeft<=1024?goLeft=goLeft+17:''
                         bann.animate({'left':`-${2*goLeft-34}px`})
-                        $('#import').css('height','830px')
+                        $('#import').css('height','920px')
                         break;
                     case '客户留言':
                         goLeft<=1024?goLeft=goLeft+17:''
                         bann.animate({'left':`-${3*goLeft-51}px`})
-                        $('#import').css('height','700px')
+                        $('#import').css('height','850px')
                         break;
                 }
             }

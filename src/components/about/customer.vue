@@ -33,10 +33,36 @@ export default{
         
     },
     mounted(){
-        $('input').focus(function(evemt){event.target.parentElement.style.background='#fec836'})
-        $('input').blur(function(evemt){event.target.parentElement.style.background='#747474'})
-        $('textarea').focus(function(evemt){event.target.parentElement.style.background='#fec836'})
-        $('textarea').blur(function(evemt){event.target.parentElement.style.background='#747474'})
+        $('input').focus(
+            function(evemt){
+                event.target.parentElement.style.border='2px solid #fec836';
+                event.target.parentElement.style.color='#000';
+                event.target.style.color='#000';
+                event.target.parentElement.style.background='rgba(0,0,0,0)';
+
+            })
+        $('input').blur(
+            function(evemt){
+                event.target.parentElement.style.border='0';
+                event.target.parentElement.style.color='#fff';
+                event.target.style.color='#fff';
+                event.target.parentElement.style.background='#747474';
+                })
+        $('textarea').focus(
+            function(evemt){
+                event.target.parentElement.style.border='2px solid #fec836';
+                event.target.parentElement.style.color='#000';
+                event.target.style.color='#000';
+                event.target.parentElement.style.background='rgba(0,0,0,0)';
+
+            })
+        $('textarea').blur(
+            function(evemt){
+                event.target.parentElement.style.border='0';
+                event.target.parentElement.style.color='#fff';
+                event.target.style.color='#fff';
+                event.target.parentElement.style.background='#747474';
+                })
     }
 }
 </script>
@@ -109,6 +135,18 @@ export default{
        color:#000;
    }
 
+@media (max-width:1920px){
+  textarea{
+      height:200px;
+      width:520px
+  }
+  textarea,input{
+      font-size: 28px;
+  }
+  .customer_box>div>div{
+      align-items: center;
+  }
+ }
 @media (max-width:1550px){
   .customer_box{
      width: 100%;

@@ -1,5 +1,6 @@
 <template>
     <div id="automatic_box">
+        
         <div class="nav">
             产品中心<span>全自动系列</span>
         </div>
@@ -34,7 +35,8 @@
     padding:15.5px 0;
     vertical-align:text-bottom;
     position:relative;
-    width:240px;
+    width:280px;
+    text-align: center;
     margin:0 auto;
   }
   #automatic_box>div.nav>span::before{

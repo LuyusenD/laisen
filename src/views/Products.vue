@@ -4,186 +4,32 @@
             <table></table>
             <p>Smart Password  Lock Series</p>
             <div>
-                <el-button icon="el-icon-arrow-left" @click="min_nav_L_R(-363,'-')" circle></el-button>
+                <el-button icon="el-icon-arrow-left" @click="min_nav_L_R(363,'+')" circle></el-button>
                 <div>
                     <ul>
-                        <li @click="slide_shop($event,-0,1)" class="active">全自动系列</li>
-                        <li @click="slide_shop($event,-width,2)">半自动系列</li>
-                        <li @click="slide_shop($event,-width*2,3)">高档别墅系列</li>
-                        <li @click="slide_shop($event,-width*3,4)">玻璃门系列</li>
+                        <li @click="slide_shop($event,'全自动系列')" class="active">全自动系列</li>
+                        <li @click="slide_shop($event,'半自动系列')">半自动系列</li>
+                        <li @click="slide_shop($event,'高档别墅系列')">高档别墅系列</li>
+                        <li @click="slide_shop($event,'玻璃门系列')">玻璃门系列</li>
                     </ul>
                 </div>
-                <el-button icon="el-icon-arrow-right" @click="min_nav_L_R(363,'+')" circle ></el-button>
+                <el-button icon="el-icon-arrow-right" @click="min_nav_L_R(-363,'-')" circle ></el-button>
             </div>
         </div>
-        <div class="shop_list">
-            <div class="shop_small_box" >
-                <div class="SL_A">
-                    <span>SL_A 系列</span>
-                    <div class="shop_img">
-                        <div>
-                            <a href="/details/1"><img src="../image/products/automatic/SL-A6.png"></a>
-                            <p>SL-A6</p>
-                        </div>
-                        <div>
-                            <a href="/details/3">
-                            <img src="../image/products/automatic/SL-A8.png"></a>
-                            <p>SL-A8</p>
-                        </div>
-                        <div>
-                            <a href="/details/2">
-                            <img src="../image/products/automatic/SL-A7.png"></a>
-                            <p>SL-A7</p>
-                        </div>
-                    </div>
-                    <div class="shop_phone_img">
-                        <el-button icon="el-icon-arrow-left" @click="phone_img($event,-240,'.phone_imgs0')" circle></el-button>
-
-                        <div class="shop_phone_ImgList">
-                            <div class="phone_imgs0">
-                                <div>
-                                    <a href="/details/1"><img src="../image/products/automatic/SL-A6.png"></a>
-                                    <p>SL-A6</p>
-                                </div>
-                                <div>
-                                    <a href="/details/3">
-                                    <img src="../image/products/automatic/SL-A8.png"></a>
-                                    <p>SL-A8</p>
-                                </div>
-                                <div>
-                                    <a href="/details/2">
-                                    <img src="../image/products/automatic/SL-A7.png"></a>
-                                    <p>SL-A7</p>
-                                </div>
-                            </div>
-                            
-                        </div>
-
-                        <el-button icon="el-icon-arrow-right" @click="phone_img($event,240,'.phone_imgs0')" circle></el-button>
-
-
-                    </div>
-                </div>
-                <div class="SL_K">
-                    <span>SL_K 系列</span>
-                    <div class="shop_img">
-                        <div>
-                            <a href="/details/4"><img src="../image/products/half_automatic/SL-K10.png"></a>
-                            <p>SL-K10</p>
-                        </div>
-                        <div>
-                            <a href="/details/5"><img src="../image/products/half_automatic/SL-K10-1.png"></a>
-                            
-                            <p>SL-K10-1</p>
-                        </div>
-                        <div>
-                            <a href="/details/6"><img src="../image/products/half_automatic/SL-K11.png"></a>
-                            <p>SL-K11</p>
-                        </div>
-                        <div>
-                            <a href="/details/7"><img src="../image/products/half_automatic/SL-K12.png"></a>
-                            <p>SL-K12</p>
-                        </div>
-                    </div>
-                    <div class="shop_phone_img">
-                        <el-button icon="el-icon-arrow-left" @click="phone_img($event,-240,'.phone_imgs1')" circle></el-button>
-                        <div class="shop_phone_ImgList">
-                            <div class="phone_imgs1">
-                                <div>
-                                    <a href="/details/4"><img src="../image/products/half_automatic/SL-K10.png"></a>
-                                    <p>SL-K10</p>
-                                </div>
-                                <div>
-                                    <a href="/details/5"><img src="../image/products/half_automatic/SL-K10-1.png"></a>
-                                    
-                                    <p>SL-K10-1</p>
-                                </div>
-                                <div>
-                                    <a href="/details/6"><img src="../image/products/half_automatic/SL-K11.png"></a>
-                                    <p>SL-K11</p>
-                                </div>
-                                <div>
-                                    <a href="/details/7"><img src="../image/products/half_automatic/SL-K12.png"></a>
-                                    <p>SL-K12</p>
-                                </div>
-                            </div>
-                        </div>
-                        <el-button icon="el-icon-arrow-right" @click="phone_img($event,240,'.phone_imgs1')" circle></el-button>
-                    </div>
-                </div>
-                <div class="SL_V">
-                    <span>SL_V 系列</span>
-                    <div class="shop_img">
-                        <div class="img_bot"></div>
-                    </div>
-                    <div class="SLV_text" >
-                        <div class="SLV_motai"></div>
-                        <div class="SLV_">
-                            <a href="/details/8"><img src="../image/products/villa/SL-V8.png"></a>
-                            <div class="slv_box">
-                                <h1>SL_V8</h1>
-                                <div class="SLV_con">
-                                    <p>华丽机身 流畅线条</p>
-                                    <p>EXPLAIN OUR STRENGTH</p>
-                                    <p>诠释我们的实例</p>
-                                    <a href="/details/8">了解更多》</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="SLV_phone">
-                            <img src="../image/products/villa/SL-V8.png">
-                            <div class="slv_box" >
-                                <h1>SL_V8</h1>
-                                <div class="">
-                                    <p>华丽机身 流畅线条</p>
-                                    <p>EXPLAIN OUR STRENGTH</p>
-                                    <p>诠释我们的实例</p>
-                                    <a href="/details/8">了解更多》</a>
-                                </div>
-                            </div>
-                        </div>
-                        
-
-
-                    </div>
-                    
-                </div>
-                <div class="SL_V SL_D">
-                    <span>SL_D 系列</span>
-                    <div class="shop_img">
-                        <div class="img_bot"></div>
-                    </div>
-                    <div class="SLV_text">
-                        <div class="SLV_motai"></div>
-                        <div class="SLV_">
-                            <a href="/details/9"><img src="../image/products/glass/SL-D18.png"></a>
-                            <div class="slv_box">
-                                <h1>SL_D18</h1>
-                                <div class="SLV_con">
-                                    <p>小巧机身 高端智能</p>
-                                    <p>EXPLAIN OUR STRENGTH</p>
-                                    <p>诠释我们的实例</p>
-                                    <a href="/details/9">了解更多》</a>
-                                </div>
-                            </div>
-                        </div>
-
-                         <div class="SLV_phone">
-                            <img src="../image/products/glass/SL-D18.png">
-                            <div class="slv_box" >
-                                <h1>SL_D18</h1>
-                                <div class="">
-                                    <p>小巧机身 高端智能</p>
-                                    <p>EXPLAIN OUR STRENGTH</p>
-                                    <p>诠释我们的实例</p>
-                                    <a href="/details/9">了解更多》</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div id="shopList_box">
+            <div class="shopList">
+                <pro-auto></pro-auto>
+                <pro-half></pro-half>
+                <pro-gla></pro-gla>
+                <pro-vil></pro-vil>
             </div>
         </div>
+
+
+
+
+
+        
         <pro-automatic v-if="this.view == 1"></pro-automatic>
         <pro-halfAutomatic v-if="this.view == 2"></pro-halfAutomatic>
         <pro-villa v-if="this.view == 3"></pro-villa>
@@ -192,6 +38,11 @@
 </template>
 
 <script>
+import auto from '../components/products/auto.vue'
+import half from '../components/products/half.vue'
+import vil from '../components/products/vil.vue'
+import gla from '../components/products/gla.vue'
+
 import automatic from '../components/products/automatic.vue'
 import halfAutomatic from '../components/products/halfAutomatic.vue'
 import villa from '../components/products/villa.vue'
@@ -205,14 +56,33 @@ export default{
         
     },
     mounted(){
-        this.width=parseInt($('#pro_box>.shop_list>div>div').css('width').slice(0,-2))
+        
     },
     methods:{
-        slide_shop(e,i,v){
+        slide_shop(e,val){
             $('.shop_nav li[class]').removeClass("active");
             e.target.className='active';
-            $('.shop_small_box').animate({'left':i});
-            this.view = v
+            let left = window.innerWidth;
+            switch(val){
+                case '全自动系列':
+                left = 0
+                this.view = 1
+                break;
+                case '半自动系列':
+                left = left-20
+                this.view = 2
+                break;
+                case '高档别墅系列':
+                window.innerWidth>=1820?left = left*2-40:left = left*2-34
+                console.log(left)
+                this.view = 3
+                break;
+                case '玻璃门系列':
+                window.innerWidth>=1820?left = left*3-62:left = left*3-50
+                this.view = 4
+                break;
+            }
+            $('.shopList').animate({'left':`-${left}px`});
         },
         min_nav_L_R(i,addDel){
             let button = $('#pro_box>.shop_nav>div .el-button')
@@ -253,10 +123,94 @@ export default{
         'pro-automatic':automatic,
         'pro-halfAutomatic':halfAutomatic,
         'pro-villa':villa,
-        'pro-glass':glass
+        'pro-glass':glass,
+        'pro-auto':auto,
+        'pro-half':half,
+        'pro-vil':vil,
+        'pro-gla':gla,
     }
 }
 </script>
+
+<style>
+a{
+    text-decoration:none;
+}
+.shop_phone_img,.SL_V>.SLV_text>.SLV_phone{
+    display:none;
+}
+.span_after::before,.span_after::after{
+    width: 80px;
+    height: 4px;
+    background:#fec836;
+    position:absolute;
+    top: 19px;
+    left: -134px;
+    content: '';
+    z-index: 1;
+}
+.span_after::after{
+    left:198px;
+}
+.shopList>div>div{
+      height:1130px;
+      width:1579px;
+      color:#fff;
+      font-size:40px;
+      text-align: center;
+      position:relative;
+      float:left;
+   }
+  .shopList span{
+      position:relative;
+      top:100px;
+      display:inline-block;
+      left: 50%;
+      margin-left: -72.5px;
+      color:#fff;
+      font-size: 32px;
+      text-align: center;
+   }
+  
+  .shopList .shop_img{
+     display:flex;
+     justify-content: center;
+     width:100%;
+     margin-top:200px;
+     position:relative;
+   }
+  .shopList img{
+      transition:1s;
+      cursor:pointer;
+   }
+  .shopList img:hover{
+      transform: scale(1.1);
+   }
+
+
+
+
+
+   .SL_V .SLV_text img:hover{
+      transform: scale(1.07);
+      
+   }
+  .shopList .shop_img>div{
+     width:420px;
+   }
+  .shopList .shop_img>div>p{
+     margin-top:30px;
+   }
+
+/* @media (max-width:1415px){
+  #pro_box>.shop_list>div>div{
+      width:1415px;
+   }
+   #pro_box>.shop_list span{
+      left:-30px;
+   }
+ } */
+</style>
 
 <style scoped>
 /*scoped*/
@@ -266,7 +220,7 @@ export default{
       padding:0;
       margin:0;
    }
-  #pro_box>.shop_nav>div .el-button,.shop_phone_img,.shop_small_box>.SL_V>.SLV_text>.SLV_phone{display:none;}
+  #pro_box>.shop_nav>div .el-button{display:none;}
   #pro_box>.shop_nav{
       height:800px;
       background:url(../image/products/7.png);
@@ -332,154 +286,20 @@ export default{
       width:0;
       height:0;
    }
-  #pro_box>.shop_list{
+  
+
+  
+  
+  #shopList_box{
       height:1130px;
       background:url(../image/products/9.png);
       position: relative;
-      width:100%;
       overflow: hidden;
    }
+   .shopList{position: relative;}
   
-  #pro_box>.shop_list>div>div{
-      height:1130px;
-      width:1579px;
-      color:#fff;
-      font-size:40px;
-      text-align: center;
-      position:relative;
-      float:left;
-   }
-  #pro_box>.shop_list span{
-      position:relative;
-      top:100px;
-   }
-  #pro_box>.shop_list span::before,#pro_box>.shop_list span::after{
-      height:4px;
-      width:76px;
-      color:#ffc965;
-      top:50%;
-      margin-top:-2px;
-      right:-134px;
-   }
-  #pro_box>.shop_list span::before{
-     left:-134px;
-   }
-  #pro_box>.shop_list .shop_img{
-     display:flex;
-     justify-content: center;
-     width:100%;
-     margin-top:200px;
-     position:relative;
-   }
-  #pro_box .shop_img img,.SL_V .SLV_text img{
-      transition:1s;
-      cursor:pointer;
-   }
-  #pro_box .shop_img img:hover{
-      transform: scale(1.1);
-   }
- .SL_V .SLV_text img:hover{
-      transform: scale(1.07);
-      
-   }
-  #pro_box>.shop_list .shop_img>div{
-     width:420px;
-   }
-  #pro_box>.shop_list .shop_img>div>p{
-     margin-top:30px;
-   }
-
-
-
-  #pro_box>.shop_list .shop_small_box{
-      position:relative;
-      width:500%;
-   }
   
-  #pro_box>.shop_list .shop_small_box .SL_K p{
-      margin-left:-120px
-   }
-  #pro_box>.shop_list .shop_small_box .SL_V{
-      background:#000;
-   }
-  #pro_box>.shop_list .shop_small_box .SL_V .shop_img>div{
-      z-index: 21;
-   }
-  #pro_box>.shop_list .shop_small_box .SL_V .shop_img{
-      margin-top:54px;
-      background:url(../image/products/villa/11.png);
-      height:100%;
-      display:block;
-      
-   }
-  #pro_box>.shop_list .shop_small_box .SL_V .shop_img .img_bot{
-      background:#ffce75;
-      width:100%;
-      position:absolute;
-      bottom:114px;
-      height:150px;
-      z-index: 0;
-   }
-  #pro_box>.shop_list .shop_small_box .SLV_text h1{
-      margin-top:32px ;
-   }
-  .shop_list .SL_V .SLV_text{
-      position:absolute;
-      top:115px;
-      width:100%;
-      height:89.5%;
-      display:flex;
-      justify-content: center;
-   }
-  #pro_box>.shop_list .SL_V span{
-      z-index: 2;
-      top:38px ;
-   }
-  .shop_list .SL_V .SLV_text img{
-      margin-left:40px;
-   }
-  .shop_list .SL_V .SLV_text .SLV_>a{
-      z-index: 1;
-   }
-  .shop_list .SL_V .SLV_text>div{
-      position:relative;
-      margin-top:58px;
-      width:972px;
-      text-align:start;
-      display:flex;
-      align-items: center;
-   }
-  .shop_list .SL_V .SLV_text .SLV_motai{
-      position:absolute;
-      width:100%; 
-      height:105%; 
-      background:rgba(0,0,0,.5);
-      margin-top:-38px;
-   }
-  .shop_list .SLV_text>div>div{
-      width:100%;
-      height:660px;
-      background:rgba(288,187,61,.7);
-      position:absolute;
-      text-align:center
-   }
-  .shop_list .SLV_text .SLV_con a,.SLV_phone a{
-      color:#000;
-      background:#fff;
-      padding:0px 14px;
-   }
-  .shop_list .SLV_text .SLV_con{
-      text-align:start;
-      font-size:36px;
-      font-family: '宋体';
-      padding:100px 0 0 406px;
-      height:355px;
-      display:flex;
-      flex-direction:column;
-      justify-content: space-between;
-      align-items:flex-start
-
-   }
+ 
   
 /*shop list 4 */
   .shop_list .SL_D .shop_img>img{
@@ -522,39 +342,10 @@ export default{
       background: rgba(0,0,0,.5);
       border:1px solid #fec836;
   }
+ }
 
-  #pro_box>.shop_list>div>div{
-      width:1515px;
-   }
- }
-@media (max-width:1415px){
-  #pro_box>.shop_list>div>div{
-      width:1415px;
-   }
-   #pro_box>.shop_list span{
-      left:-30px;
-   }
- }
-@media (max-width:1315px){
-  #pro_box>.shop_list>div>div{
-      width:1315px;
-   }
- }
-@media (max-width:1288px){
-  #pro_box>.shop_list>div>div{
-      width:1288px;
-   }
-  .shop_list .SL_K .shop_img{
-      justify-content: start !important;
-      margin:0 auto !important;
-      padding-top:200px;
-      width:700px !important;
-      overflow:hidden;
-  }
-  .shop_list .SL_K .shop_img>div{
-      padding:0 20px
-  }
- }
+
+
 @media (max-width:1156px){
    #pro_box>.shop_list>div>div{
       width:1156px;
@@ -672,6 +463,20 @@ export default{
 </style>
 
 
+<style scoped>
+ #shopList_box{
+     width:100%;
+ }
+ #shopList_box>.shopList{
+     width:400%;
+     display:flex;
+ }
+ #shopList_box>.shopList>div{
+     width:100%;
+     float:left;
+     
+ }
+</style>
 
 
 

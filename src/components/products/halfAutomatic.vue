@@ -1,5 +1,11 @@
 <template>
     <div id="halfAutomatic_box">
+
+
+
+
+
+        
         <div class="nav">
             产品中心<span>半自动系列</span>
         </div>
