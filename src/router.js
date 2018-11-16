@@ -5,12 +5,18 @@ import Products from './views/Products.vue'
 import Details from './views/Details.vue'
 import Service from './views/Service.vue'
 import About from './views/About.vue'
+import Dealer from './views/Dealer.vue'
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
+    {
+      path: '/Dealer',
+      name: 'Dealer',
+      component: Dealer,
+    },
     {
       path: '/About',
       name: 'About',
@@ -22,7 +28,7 @@ export default new Router({
       component: Service,
     },
     {
-      path: '/Details',
+      path: '/Details/:id',
       name: 'Details',
       component: Details,
     },

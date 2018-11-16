@@ -94,5 +94,39 @@
       font-size: 30px;
       background:#868686;
   }
+  
+@media (max-width:1550px){
+  .resource{
+     width: 100%;
+  }
+ }
+@media (max-width:414px){
+  .res_bann{
+      width: 414px;
+      
+  }
+  .resource>.res_bann>div:nth-child(1){
+      font-size: 18px;
+      height: 186px;
+  }
+
+  .after:after {
+      top: -20px;
+      left: 70px;
+  }
+  .content{
+      flex-direction: column;
+  }
+  .content>div,.res_table>table,tr{
+      width: 100%;
+      font-size: 18px!important;
+      margin-top:6px;
+  }
+  .content>div{
+        box-sizing: border-box;
+    }
+}
+
+
 </style>
 

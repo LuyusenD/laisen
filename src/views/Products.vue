@@ -22,16 +22,16 @@
                     <span>SL_A 系列</span>
                     <div class="shop_img">
                         <div>
-                            <a href="/details?id=1"><img src="../image/products/automatic/SL-A6.png"></a>
+                            <a href="/details/1"><img src="../image/products/automatic/SL-A6.png"></a>
                             <p>SL-A6</p>
                         </div>
                         <div>
-                            <a href="/details?id=3">
+                            <a href="/details/3">
                             <img src="../image/products/automatic/SL-A8.png"></a>
                             <p>SL-A8</p>
                         </div>
                         <div>
-                            <a href="/details?id=2">
+                            <a href="/details/2">
                             <img src="../image/products/automatic/SL-A7.png"></a>
                             <p>SL-A7</p>
                         </div>
@@ -42,16 +42,16 @@
                         <div class="shop_phone_ImgList">
                             <div class="phone_imgs0">
                                 <div>
-                                    <a href="/details?id=1"><img src="../image/products/automatic/SL-A6.png"></a>
+                                    <a href="/details/1"><img src="../image/products/automatic/SL-A6.png"></a>
                                     <p>SL-A6</p>
                                 </div>
                                 <div>
-                                    <a href="/details?id=3">
+                                    <a href="/details/3">
                                     <img src="../image/products/automatic/SL-A8.png"></a>
                                     <p>SL-A8</p>
                                 </div>
                                 <div>
-                                    <a href="/details?id=2">
+                                    <a href="/details/2">
                                     <img src="../image/products/automatic/SL-A7.png"></a>
                                     <p>SL-A7</p>
                                 </div>
@@ -68,20 +68,20 @@
                     <span>SL_K 系列</span>
                     <div class="shop_img">
                         <div>
-                            <a href="/details?id=4"><img src="../image/products/half_automatic/SL-K10.png"></a>
+                            <a href="/details/4"><img src="../image/products/half_automatic/SL-K10.png"></a>
                             <p>SL-K10</p>
                         </div>
                         <div>
-                            <a href="/details?id=5"><img src="../image/products/half_automatic/SL-K10-1.png"></a>
+                            <a href="/details/5"><img src="../image/products/half_automatic/SL-K10-1.png"></a>
                             
                             <p>SL-K10-1</p>
                         </div>
                         <div>
-                            <a href="/details?id=6"><img src="../image/products/half_automatic/SL-K11.png"></a>
+                            <a href="/details/6"><img src="../image/products/half_automatic/SL-K11.png"></a>
                             <p>SL-K11</p>
                         </div>
                         <div>
-                            <a href="/details?id=7"><img src="../image/products/half_automatic/SL-K12.png"></a>
+                            <a href="/details/7"><img src="../image/products/half_automatic/SL-K12.png"></a>
                             <p>SL-K12</p>
                         </div>
                     </div>
@@ -90,20 +90,20 @@
                         <div class="shop_phone_ImgList">
                             <div class="phone_imgs1">
                                 <div>
-                                    <a href="/details?id=4"><img src="../image/products/half_automatic/SL-K10.png"></a>
+                                    <a href="/details/4"><img src="../image/products/half_automatic/SL-K10.png"></a>
                                     <p>SL-K10</p>
                                 </div>
                                 <div>
-                                    <a href="/details?id=5"><img src="../image/products/half_automatic/SL-K10-1.png"></a>
+                                    <a href="/details/5"><img src="../image/products/half_automatic/SL-K10-1.png"></a>
                                     
                                     <p>SL-K10-1</p>
                                 </div>
                                 <div>
-                                    <a href="/details?id=6"><img src="../image/products/half_automatic/SL-K11.png"></a>
+                                    <a href="/details/6"><img src="../image/products/half_automatic/SL-K11.png"></a>
                                     <p>SL-K11</p>
                                 </div>
                                 <div>
-                                    <a href="/details?id=7"><img src="../image/products/half_automatic/SL-K12.png"></a>
+                                    <a href="/details/7"><img src="../image/products/half_automatic/SL-K12.png"></a>
                                     <p>SL-K12</p>
                                 </div>
                             </div>
@@ -119,14 +119,14 @@
                     <div class="SLV_text" >
                         <div class="SLV_motai"></div>
                         <div class="SLV_">
-                            <a href="/details?id=8"><img src="../image/products/villa/SL-V8.png"></a>
+                            <a href="/details/8"><img src="../image/products/villa/SL-V8.png"></a>
                             <div class="slv_box">
                                 <h1>SL_V8</h1>
                                 <div class="SLV_con">
                                     <p>华丽机身 流畅线条</p>
                                     <p>EXPLAIN OUR STRENGTH</p>
                                     <p>诠释我们的实例</p>
-                                    <a href="/details?id=8">了解更多》</a>
+                                    <a href="/details/8">了解更多》</a>
                                 </div>
                             </div>
                         </div>
@@ -138,7 +138,7 @@
                                     <p>华丽机身 流畅线条</p>
                                     <p>EXPLAIN OUR STRENGTH</p>
                                     <p>诠释我们的实例</p>
-                                    <a href="/details?id=8">了解更多》</a>
+                                    <a href="/details/8">了解更多》</a>
                                 </div>
                             </div>
                         </div>
@@ -156,14 +156,14 @@
                     <div class="SLV_text">
                         <div class="SLV_motai"></div>
                         <div class="SLV_">
-                            <a href="/details?id=9"><img src="../image/products/glass/SL-D18.png"></a>
+                            <a href="/details/9"><img src="../image/products/glass/SL-D18.png"></a>
                             <div class="slv_box">
                                 <h1>SL_D18</h1>
                                 <div class="SLV_con">
                                     <p>小巧机身 高端智能</p>
                                     <p>EXPLAIN OUR STRENGTH</p>
                                     <p>诠释我们的实例</p>
-                                    <a href="/details?id=9">了解更多》</a>
+                                    <a href="/details/9">了解更多》</a>
                                 </div>
                             </div>
                         </div>
@@ -176,7 +176,7 @@
                                     <p>小巧机身 高端智能</p>
                                     <p>EXPLAIN OUR STRENGTH</p>
                                     <p>诠释我们的实例</p>
-                                    <a href="/details?id=9">了解更多》</a>
+                                    <a href="/details/9">了解更多》</a>
                                 </div>
                             </div>
                         </div>
@@ -213,7 +213,6 @@ export default{
             e.target.className='active';
             $('.shop_small_box').animate({'left':i});
             this.view = v
-            // console.log(this.view)
         },
         min_nav_L_R(i,addDel){
             let button = $('#pro_box>.shop_nav>div .el-button')
@@ -228,7 +227,6 @@ export default{
                 ul.stop().animate({'left':del+'px'})
                 return
             }
-            console.log()
             button.attr({'disabled':'true'})
             ul.stop().animate({'left':(left+i)+'px'})
             setTimeout(function(){

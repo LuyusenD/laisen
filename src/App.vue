@@ -8,7 +8,7 @@
 <script>
   import Header from './views/header.vue'
   import Footer from './views/footer.vue'
-
+  import '../public/js/jquery-3.2.1.js'
   export default{
     data(){
       return{}

@@ -56,11 +56,13 @@ export default{
     methods:{
         start(){
             if(!this.Start){return}
-            $('.bann>div>div').css({'margin-top':'280px','opacity':'1'})
+            let Topdown = 280;
+            let WindowWidth = window.innerWidth;
+            WindowWidth>=1600?Topdown=280:WindowWidth>=1024?Topdown=230:WindowWidth>=414?Topdown=80:''
+            $('.bann>div>div').css({'margin-top':`${Topdown}px`,'opacity':'1'})
             $('.bann>div>p').css({'margin-top':'20px','opacity':'1'})
             
             /*280*/
-
 
             this.Start=false
         }
@@ -85,14 +87,14 @@ p{
     width: 100%;
     font-size: 36px;
     color: #fff;
-}
+ }
 .bann>div div{
     width:450px;
     margin: 0 auto 0;
     transition: 2s;
     opacity: 0;
     position: relative;
-}
+ }
 .bann>div div:after{
     content: '';
     width: 120px;
@@ -101,14 +103,14 @@ p{
     position:absolute;
     top: -80px;
     left: 150px;
-}
+ }
 .bann>div p{
     font-size: 26px;
-    width:520px;
+    width:560px;
     margin: -50px auto 0;
     transition: 3s;
     opacity: 0;
-}
+ }
 #service_Box .title{
     display:flex;
     justify-content: center;
@@ -146,9 +148,12 @@ p{
     justify-content: center;
     align-items: center;
  }
+ .serve{
+     justify-content: flex-start;
+ }
 .body>div{
     display:flex;
-    margin-top:76px;
+    margin-top:30px;
  }
 .body>div>div:hover{
     border:2px solid #fec836;
@@ -175,7 +180,7 @@ p{
 .serve>div{
     display:flex;
     margin-top:50px;
-}
+ }
 .serve>div>div{
     width:486px;
     height:330px;
@@ -184,13 +189,96 @@ p{
     flex-direction: column;
     align-items: center;
     font-size:26px;
-}
+ }
 .serve>div>div>img:hover{
     transform: rotate(360deg)
-}
+ }
 .serve>div>div>img{
     margin-bottom: 40px;
     transition:1s
+ }
+
+
+
+
+
+@media (max-width:1336px){
+    .body{
+        height:650px;
+    }
+    .body>div>div{
+        width:545px;
+        height: 195px;
+    }
+    .serve img{
+        width:230px;
+    }
+ }
+@media (max-width:1180px){
+  .body{
+        height:600px;
+    }
+    .body>div>div{
+        width:480px;
+        height: 165px;
+    }
+    .body>div>div img{
+        width:100px;
+        height: 100px;
+    }
+    .body>div>div:nth-child(1) {
+        margin-right: 40px;
+    }
+    .body>div>div>div:nth-child(1){
+        margin-right: 25px;
+    }
+    .serve img{
+        width:200px;
+    }
+ }
+@media (max-width:414px){
+    .bann>img{
+        height:250px;
+    }
+    .bann>div>div,.bann>div p{
+        font-size: 18px;
+        width:100%;
+        text-align: center;
+    }
+    .bann>div>div:after{
+        width:60px;
+        top:-25px;
+        left:169px;
+    }
+    .body>div{
+        margin-top: 0px;
+    }
+    .body>div>div{
+        width:100%;
+        margin-top: 20px;
+        padding: 0 30px;
+        height:150px;
+        font-size: 20px;
+        box-sizing: border-box;
+    }
+    .body>div>div>div:nth-child(1){
+        margin-right: 30px;
+    }
+    .serve{
+        height:850px;
+    }
+    .body>div,.serve>div{
+        flex-direction: column;
+        height:400px;
+    }
+    .serve>div>div{
+        width:300px;
+        
+    }
+    .serve>div img{
+        width:100px;
+    }
+    
 }
 </style>
 

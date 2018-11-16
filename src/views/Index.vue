@@ -26,8 +26,7 @@
                     <span>SMART PASSWORD LOCK</span>
                 </div>
                 <el-carousel :interval="4000" type="card" >
-                    <el-carousel-item v-for="i in shopBannList" >
-                    <!-- <el-carousel-item v-for="i in shopBannList"  style="width:300px; height:500px"> -->
+                    <el-carousel-item v-for="(i,index) in shopBannList"  :key="index">
                         <img :src="i.img"  style="height:350px;"/>
                         <p>{{i.title}}</p>
                         <p>{{i.type}}</p>
@@ -113,7 +112,7 @@ export default {
          if(num > 100){num=100}
          ctx.font = "32px BebasKai";
          ctx.fillStyle="#fff"
-         elem=='canv2'?ctx.fillText(value+'+',Tw,Th):ctx.fillText(value+'%',Tw,Th);
+         elem=='canv2'?ctx.fillText(value+'+',Tw,Th):elem=='canv1'?ctx.fillText(value,Tw,Th):ctx.fillText(value+'%',Tw,Th);
          ctx.beginPath();
          end += 3.6;
          ctx.arc(160,160,150,start*Math.PI/180,end*Math.PI/180);
@@ -135,7 +134,6 @@ export default {
            for(var i=0;i<list.length;i++){
                if(list[i].id==Id){
                    this.shop = list[i]
-                   console.log(this.shop)
                }
            }
            
@@ -145,7 +143,6 @@ export default {
            this.shop=null;
        },
        bann_change(){
-           console.log(1)
        }
     },
     created(){
@@ -530,7 +527,7 @@ p,ul,li{
     left:50%;
     top:50%;
     position: absolute;    
-    margin:-20% 0 0 -30%;
+    margin:-70% 0 0 -30%;
     border-radius:16px;
  }
 #Model_shop .Model_main .el-button{

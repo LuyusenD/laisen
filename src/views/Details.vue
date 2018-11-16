@@ -23,19 +23,21 @@
                 </div>
             </div>
             <div class="C_two">
-               <div class="fdj_box">
-                   <img src="../image/products/shop/SL-A7/aa.png">
-               </div>
                <p>{{cAs.title}}</p>
                <div>
                    <span>产品配色</span>
-                   <a href="javascript:;" v-for='i in cAs.color' :key={i}>
+                   <a href="javascript:;" v-for='(i,index) in cAs.color' :key="index">
                        <i :style="i=='红古铜'?'background:#d99e8d':i=='银灰色'?'background:#a0a0a0':'background:#000'"></i> {{i}}
                    </a>
                </div>
                <span>购买可致电：0755-2107-8049</span>
             </div>
 
+        </div>
+        <div class="fdj_box">
+            <div>
+                <img :src="imgUrl">
+            </div>
         </div>
         <div class="shop_img">
             <!-- 介绍 -->
@@ -129,8 +131,8 @@ export default {
         imgUrl:null
     }},
     created(){
-        let id = this.$route.query.id ;
-        const _this = this ;
+        let id = this.$route.params.id
+        const _this = this;
         Vuex.state.details.map((obj)=>{
             if(obj.id==id){
                 _this.cAs = obj
@@ -156,8 +158,8 @@ export default {
             e.offsetY<100.7?top = 0:e.offsetY>elY?top = elY-100.7:''
             $('.fdj>div').css({'left':left,'top':top})
             
-            $('.fdj_box img').css('left',-1000*(left/(elX+125)))
-            $('.fdj_box img').css('top',-806*(top/(elY+100.7)))
+            $('.fdj_box div').css('left',-1000*(left/(elX+125)))
+            $('.fdj_box div').css('top',-806*(top/(elY+100.7)))
         },
         imgSizeOver(){
             $('.fdj>div').show()
@@ -445,7 +447,7 @@ export default {
 
 <style scoped>
 /*放大镜*/
-.fdj>div,.content>.C_two>.fdj_box{
+.fdj>div,.fdj_box{
     display:none;
 }
 .C_one>div>div{
@@ -468,22 +470,27 @@ export default {
     height:100%;
     top:0;
 }
-.content>.C_two>.fdj_box{
+.fdj_box{
     position: absolute;
     border:1px solid #ccc!important;
     box-shadow:3px 3px 4px #ccc;
     z-index:2;
     width:500px;
     height:403px;
-    top:52px;
-    left:-30px;
+    top:272px;
+    left:50%;
+    margin-left:-100px;
     overflow:hidden;
-    
 }
-.fdj_box img{
+.fdj_box>div{
     width: 1000px;
+    height:806px;
     top: 0;
     left:0;
     position: absolute;
+}
+.fdj_box>div>img{
+    width: 100%;
+    height:100%;
 }
 </style>

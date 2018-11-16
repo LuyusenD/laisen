@@ -39,4 +39,29 @@
        text-align: center;
        margin: 0 50px;
    }
+
+@media (max-width:1550px){
+  .contact_box{
+      width: 100%;
+  }
+ }
+
+
+@media (max-width:414px){
+    .contact_box>img{
+        width:414px;
+        height:200px;
+    }
+    .contact_box>div{
+        flex-direction: column;
+        height: 600px;
+    }
+    .contact_box>div>div{
+        width: 100%;
+        margin: 70px 0 0 ;
+        font-size: 18px
+    }
+    
+}
+
 </style>

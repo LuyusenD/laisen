@@ -9,7 +9,7 @@
           <li><router-link to="/products" active-class="active">PRODUCTS</router-link></li>
           <li><router-link to="/Service" active-class="active" >SERVICE</router-link></li>
           <li><router-link to="/About" active-class="active">ABOUT US</router-link></li>
-          <li><router-link to="/" >DEALER</router-link></li>
+          <li><router-link to="/Dealer" active-class="active">DEALER</router-link></li>
         </ul>
         <div id="iphone_list">
           <el-button icon="el-icon-more-outline" @click="phone_nav()"  ></el-button>
@@ -18,7 +18,7 @@
             <li><router-link to="/products" active-class="active">PRODUCTS</router-link></li>
             <li><router-link to="/Service" active-class="active" >SERVICE</router-link></li>
             <li><router-link to="/About" active-class="active">ABOUT US</router-link></li>
-            <li><router-link to="/" >DEALER</router-link></li>
+            <li><router-link to="/Dealer" active-class="active">DEALER</router-link></li>
           </ul>
         </div>
       </div>
@@ -29,6 +29,7 @@
 export default{
     data(){return{}},
     created(){
+      
     },
     mounted(){
     },
