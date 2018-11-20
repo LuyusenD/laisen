@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div id="header">
       <div>
         <img src="../image/logo.png" alt="">
@@ -8,38 +8,42 @@
           <li  @mouseover="over($event)" @mouseout="out($event)" @click="actives($event)">
               <span>HOME</span>
               <span>首页</span>
-              <router-link to="/" active-class="active"  exact></router-link>
+              <a target="_blank" href="/"    exact></a>
           </li>
           <li @mouseover="over($event)" @mouseout="out($event)" @click="actives($event)">
               <span>PRODUCTS</span>
               <span>产品中心</span>
-              <router-link to="/products" active-class="active" ></router-link>
+              <a target="_blank" href="/products"   ></a>
           </li>
           <li @mouseover="over($event)" @mouseout="out($event)" @click="actives($event)">
               <span>SERVICE</span>
               <span>服务中心</span>
-              <router-link to="/Service" active-class="active" ></router-link>
+              <a target="_blank" href="/Service"  ></a>
           </li>
           <li  @mouseover="over($event)" @mouseout="out($event)" @click="actives($event)">
               <span>ABOUT US</span>
               <span>关于我们</span>
-              <router-link to="/About" active-class="active" ></router-link>
+              <a target="_blank" href="/About"  ></a>
           </li>
           <li  @mouseover="over($event)" @mouseout="out($event)" @click="actives($event)">
               <span>DEALER</span>
               <span>经销商</span>
-              <router-link to="/Dealer" active-class="active"></router-link>
+              <a target="_blank" href="/Dealer" ></a>
           </li>
- 
         </ul>
+	<div class="En_Cn">
+	     <a href="javascript:;">EN</a> / <a href="javascript:;">CN</a> 
+	     <img src="../image/header/weixin.png" @mouseover="Imgover($event,'wx')" @mouseout="Imgout($event)"/> 
+	     <img src="../image/header/QQ.png" @mouseover="Imgover($event,'qq')" @mouseout="Imgout($event)"/>
+	</div>
         <div id="iphone_list">
           <el-button icon="el-icon-more-outline" @click="phone_nav()"  ></el-button>
           <ul class="iphone_nav">
-            <li><router-link to="/" active-class="active" exact>HOME</router-link></li>
-            <li><router-link to="/products" active-class="active">PRODUCTS</router-link></li>
-            <li><router-link to="/Service" active-class="active" >SERVICE</router-link></li>
-            <li><router-link to="/About" active-class="active">ABOUT US</router-link></li>
-            <li><router-link to="/Dealer" active-class="active">DEALER</router-link></li>
+            <li><a target="_blank" href="/" active-class="active" exact>HOME</a></li>
+            <li><a target="_blank" href="/products" active-class="active">PRODUCTS</a></li>
+            <li><a target="_blank" href="/Service" active-class="active" >SERVICE</a></li>
+            <li><a target="_blank" href="/About" active-class="active">ABOUT US</a></li>
+            <li><a target="_blank" href="/Dealer" active-class="active">DEALER</a></li>
           </ul>
         </div>
       </div>
@@ -47,14 +51,31 @@
 </template>
 
 <script>
+import imgWX from '@/image/header/weixinc.png'
+import imgQQ from '@/image/header/qqc.png'
 export default{
-    data(){return{}},
+    data(){return{
+  	pro:null,
+	list:['/','/products','/Service','/About','/Dealer'],
+	imgUrl:null
+    }},
     created(){
-      
+        this.pro = this.$route.path;
     },
     mounted(){
+        let i = this.list.indexOf(this.pro);
+	$(`.nav_ul>li:nth-child(${i+1}) a`).addClass('active')
+	$(`.nav_ul>li:nth-child(${i+1}) span:nth-child(1)`).css({'margin-top':'-72px'})
+        
     },
     methods:{
+        Imgover(e,type){
+  	     this.imgUrl = e.target.src;
+  	     type=='qq'?e.target.src=imgQQ:e.target.src=imgWX
+	},
+	Imgout(e){
+	     e.target.src=this.imgUrl
+	},
         phone_nav(){
             $('.iphone_nav').slideToggle()
         },
@@ -173,7 +194,18 @@ li{list-style: none;}
   content:'';
   transition:.5s;
  } 
-
+ .En_Cn{
+   position:absolute;
+   top:16px;
+   right:130px
+ }
+ .En_Cn a:nth-child(2){
+   color:#fff;
+ }
+ .En_Cn>img{
+   margin-left:16px;
+   cursor:pointer;
+ }
 
  @media (max-width:1766px){
   #header>div:nth-child(1)>img{

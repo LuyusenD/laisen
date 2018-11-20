@@ -1,12 +1,15 @@
-<template>
+﻿<template>
     <div class="customer_box">
         <div>
-            SALIFELINK 服务
-            <p>COUSTOMER MESSAGE</p>
+            
 
             <div>
                 <input type="text" placeholder="姓名">
                 <input type="text" placeholder="电话">
+            </div>
+	    <div>
+                <input type="text" placeholder="地址">
+                <input type="text" placeholder="型号">
             </div>
             <textarea  cols="30" rows="10" placeholder="留言"></textarea>
             <ul>
@@ -31,15 +34,13 @@ export default{
 
 <style scoped>
   .customer_box{
-      height:600px;
+      height:450px;
       background:#4a89d7;
 
   }
   .customer_box>div{
       width:352px;
-      height:400px;
-      margin:100px auto 0;
-      font-size: 26px;
+      margin:74px auto 0;
       text-align: center;
   }
   
@@ -58,10 +59,17 @@ export default{
       border-radius:10px 10px 0 0;
       padding-left: 20px;
   }
+  .customer_box>div>.addss>input{
+      border-radius:10px
+  }
+  .customer_box>div>.addss>input:nth-child(2){
+      margin-top:6px;
+      border-radius:10px
+  }
   textarea{
       margin-top: 2px;
       width:312px;
-      height:70px;
+      height:111px;
       border: 0;
       outline: 0;
       resize: none;

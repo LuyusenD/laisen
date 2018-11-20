@@ -145,10 +145,14 @@ p{
     flex-direction:column;
     justify-content: center;
     align-items: center;
+    
  }
+
  .serve{
      flex-direction:row;
      justify-content: flex-start;
+     height:450px;
+     color:#8d8d8d 
  }
 .body>div{
     display:flex;
@@ -164,7 +168,7 @@ p{
     align-items: center;
     padding:30px;
     font-size:26px;
-    color:#535353;
+    color:#8d8d8d;
     border:2px solid #aaa;
  }
 .body>div>div>div:nth-child(1){
@@ -175,10 +179,11 @@ p{
  }
 .serve{
     background:#fff;
+    
  }
 .serve>div{
     display:flex;
-    margin-top:50px;
+    margin-top:5px;
  }
 .serve>div>div{
     width: 345px;
@@ -190,7 +195,7 @@ p{
     font-size:26px;
  }
 .serve>div>div>img:hover{
-    transform: rotate(360deg)
+    
  }
 .serve>div>div>img{
     margin-bottom: 40px;

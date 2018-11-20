@@ -2,7 +2,7 @@
     <div class="resource">
         <div class="res_bann">
             <div>
-                WIN-win COOPERATION
+                WIN-WIN COOPERATION
                 <p class="after">员工是企业和发展的力量源泉</p>
             </div>
             <div class="content">
@@ -45,14 +45,15 @@
   }
   .resource .res_bann>div:nth-child(1) p{
       position: relative;
+      margin: 40px 0 40px 0;
   }
   .resource .res_bann>div:nth-child(1){
-      height: 345px;
-      font-size: 32px;
+      height: 200px;
+      font-size: 28px;
       font-weight: 600;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: flex-end;
       align-items: center;
   }
   .after:after{
@@ -62,8 +63,8 @@
       height:4px;
       z-index: 1;
       position: absolute;
-      top: -60px;
-      left: 160px;
+      top: -22px;
+      left: 142px;
   }
   .content{
       display:flex;

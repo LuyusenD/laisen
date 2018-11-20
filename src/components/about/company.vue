@@ -16,6 +16,7 @@
         <div class="body_flex">
             <div>
                 <p class="after">
+		    <span>行业背景</span><br>
                     锁具行业的历史最早可追溯到1547年，锁具行业协会建立后，发布了一系列的
                     规范条例，之后锁具行业开始进入蓬勃发展阶段伴随精工制造的理念及工业化
                     高速进程，目前我们跟上时代步伐，进入智能锁时代。
@@ -153,7 +154,7 @@ export default{
  }
 .company .img img{
     width:620px;
-    margin: 30px 0 0 -610px;
+    margin: 30px 0 0 -691px;
     z-index: 1;
     position:relative;
  }
@@ -190,14 +191,27 @@ export default{
     height:4px;
     position:absolute;
     background:#fec836;
-    top:-30px;
+    top:-11px;
     left: 0;
  }
+.body_flex>div:nth-child(1) p{
+    color: #3d3d3d;
+    font-family: '宋体';
+    top:50%;
+    display: inline-block;
+    line-height: 2;
+    left: 50%;
+    margin:-72px 0 0 -310px;
+}
 .body_flex>div:nth-child(2){
     background:#e7e7e7;
   }
 .body_flex>div:nth-child(2)>p{
-    margin:42px 0 10px 20px;
+    margin:42px 0 10px 36px;
+    font-family:'宋体';
+    color:#3d3d3d;
+    display: inline-block;
+    line-height: 1.5;
  }
 .body_flex>div:nth-child(2)>p.after::after{
     top:-10px;

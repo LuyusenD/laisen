@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div class="Dealer_box">
         <img src="../image/about/dealer/13.png">
         <div class="nav">
@@ -57,7 +57,7 @@
       height:4px;
       z-index: 1;
       position: absolute;
-      top: -40px;
+      top: -28px;
       left: 20px;
   }
 .Dealer_box>img{
@@ -81,6 +81,8 @@
     background:#fec836;
     color:#fff;
  }
+
+
 .Dealer_box>div.nav>li>i{
     width:35px;
     height:35px;
@@ -92,7 +94,7 @@
     /* margin-left: 35px; */
  }
 .title{
-    height:300px;
+    height:169px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,6 +104,9 @@
  }
 .title p{
    position: relative;
+ }
+.title div{
+   margin-top:28px
  }
 .content{
     height:500px;

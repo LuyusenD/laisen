@@ -1,4 +1,4 @@
-<template>
+﻿<template>
      <div class="SL_V" style="height: 1000px;">
         <span class="span_after">SL_V 系列</span>
         <div class="shop_img">
@@ -7,14 +7,14 @@
         <div class="SLV_text" >
             <div class="SLV_motai"></div>
             <div class="SLV_">
-                <a href="/details/8"><img src="../../image/products/villa/SL-V8.png"></a>
+                <a href="/details/8" target="_blank"><img src="../../image/products/villa/SL-V8.png"></a>
                 <div class="slv_box">
                     <h1>SL-V8</h1>
                     <div class="SLV_con">
                         <p>华丽机身 流畅线条</p>
                         <p>EXPLAIN OUR STRENGTH</p>
                         <p>诠释我们的实例</p>
-                        <a href="/details/8">了解更多》</a>
+                        <a href="/details/8" target="_blank">了解更多》</a>
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                         <p>华丽机身 流畅线条</p>
                         <p>EXPLAIN OUR STRENGTH</p>
                         <p>诠释我们的实例</p>
-                        <a href="/details/8">了解更多》</a>
+                        <a href="/details/8" target="_blank">了解更多》</a>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div class="SL_V SL_D" >
         <span>SL_D 系列</span>
         <div class="shop_img">
@@ -7,14 +7,14 @@
         <div class="SLV_text">
             <div class="SLV_motai"></div>
             <div class="SLV_">
-                <a href="/details/9"><img src="../../image/products/glass/SL-D18.png"></a>
+                <a href="/details/9" target="_blank"><img src="../../image/products/glass/SL-D18.png"></a>
                 <div class="slv_box">
                     <h1>SL_D18</h1>
                     <div class="SLV_con">
                         <p>小巧机身 高端智能</p>
                         <p>EXPLAIN OUR STRENGTH</p>
                         <p>诠释我们的实例</p>
-                        <a href="/details/9">了解更多》</a>
+                        <a href="/details/9" target="_blank">了解更多》</a>
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                         <p>小巧机身 高端智能</p>
                         <p>EXPLAIN OUR STRENGTH</p>
                         <p>诠释我们的实例</p>
-                        <a href="/details/9">了解更多》</a>
+                        <a href="/details/9" target="_blank">了解更多》</a>
                     </div>
                 </div>
             </div>

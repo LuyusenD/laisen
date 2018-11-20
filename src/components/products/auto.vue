@@ -1,18 +1,18 @@
-<template>
+﻿<template>
     <div class="SL_A" style="overflow:hidden">
         <span class="span_after">SL_A 系列</span>
         <div class="shop_img">
             <div>
-                <a href="/details/1"><img src="../../image/products/automatic/SL-A6.png"></a>
+                <a href="/details/1" target="_blank"><img src="../../image/products/automatic/SL-A6.png"></a>
                 <p>SL-A6</p>
             </div>
             <div>
-                <a href="/details/3">
+                <a href="/details/3" target="_blank">
                 <img src="../../image/products/automatic/SL-A8.png"></a>
                 <p>SL-A8</p>
             </div>
             <div>
-                <a href="/details/2">
+                <a href="/details/2" target="_blank">
                 <img src="../../image/products/automatic/SL-A7.png"></a>
                 <p>SL-A7</p>
             </div>
@@ -23,16 +23,16 @@
             <div class="shop_phone_ImgList">
                 <div class="phone_imgs0">
                     <div>
-                        <a href="/details/1"><img src="../../image/products/automatic/SL-A6.png"></a>
+                        <a href="/details/1" target="_blank" ><img src="../../image/products/automatic/SL-A6.png"></a>
                         <p>SL-A6</p>
                     </div>
                     <div>
-                        <a href="/details/3">
+                        <a href="/details/3" target="_blank" >
                         <img src="../../image/products/automatic/SL-A8.png"></a>
                         <p>SL-A8</p>
                     </div>
                     <div>
-                        <a href="/details/2">
+                        <a href="/details/2" target="_blank" >
                         <img src="../../image/products/automatic/SL-A7.png"></a>
                         <p>SL-A7</p>
                     </div>

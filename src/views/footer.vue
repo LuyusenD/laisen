@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div id="footer">
         <div class="footer_one">
           <div>
@@ -15,41 +15,55 @@
                 <p>0755-2107-8049</p>
               </div>
             </div>
-            <p>森莱智联公司地址：广东深圳市龙华新区观澜大道57-1号</p>
+	    <p>华西区域 叶经理: 137 1708 3485</p>
+	    <p>华东区域 杨经理: 175 2047 0959</p>
+	    <p>华北区域 梅经理: 153 6169 3621</p>
+	    <p>华南区域 向经理: 136 0305 7151</p>
+	    <p>海外市场 曾经理: 151 1241 1128</p>
+
+            <p class="gs">公司地址：广东深圳市龙华新区观澜大道57-1号</p>
           </div>
         </div>
         <div class="footer_two">
           <div class="footer___">
-            <h5><a href="#">产品中心</a></h5>
+            <h2><a href="#">产品中心</a></h2>
             <ul>
-              <li><a href="#">全自动系列</a></li>
-              <li><a href="#">半自动系列</a></li>
-              <li><a href="#">豪华别墅系列</a></li>
-              <li><a href="#">玻璃锁系列</a></li>
+              <li><a href="/products" target="_blank">全自动系列</a></li>
+              <li><a href="/products" target="_blank">半自动系列</a></li>
+              <li><a href="/products" target="_blank">豪华别墅系列</a></li>
+              <li><a href="/products" target="_blank">玻璃锁系列</a></li>
             </ul>
           </div>
           <div>
-            <h5><a href="#">经销商专区</a></h5>
+            <h2><a href="#">经销商专区</a></h2>
             <ul>
               <li><a href="#">招商加盟</a></li>
+	      <li><a href="#">经销商管理</a></li>
             </ul>
           </div>
           <div>
-            <h5><a href="#">服务支持</a></h5>
+            <h2><a href="#">服务支持</a></h2>
             <ul>
               <li><a href="#">售后咨询</a></li>
+              <li><a href="#">资料下载</a></li>
+              <li><a href="#">保修政策</a></li>
             </ul>
           </div>
           <div>
-            <h5><a href="#">走进森莱</a></h5>
+            <h2><a href="#">走进森莱</a></h2>
             <ul>
-              <li><a href="#">人力资源</a></li>
-              <li><a href="#">公司简介</a></li>
-              <li><a href="#">联系我们</a></li>
+              <li><a href="/About" target="_blank">公司简介</a></li>
+              <li><a href="/About" target="_blank">人力资源</a></li>
+              <li><a href="/About" target="_blank">联系我们</a></li>
             </ul>
           </div>
           <div>
-            <h5><a href="#">新闻中心</a></h5>
+            <h2><a href="#">新闻中心</a></h2>
+	    <ul>
+              <li><a href="#">公司新闻</a></li>
+              <li><a href="#">媒体报道</a></li>
+              <li><a href="#">视频中心</a></li>
+  	    </ul>
           </div>
         </div>
     </div>
@@ -69,7 +83,7 @@ a{
  }
 li{list-style: none;}
 #footer{
-  height:614px;
+  height:350px;
   width:100%;
   background:url(../image/footer/bg.png);
   position:relative;
@@ -77,17 +91,17 @@ li{list-style: none;}
  }
 #footer>.footer_one>div:nth-child(1){
   align-items:center;
-  font-size:32px;
-  margin-right:56px;
+  font-size:27px;
+  margin:20px 56px 0 0;
   font-weight:600;
  }
 #footer>.footer_one>div>img:nth-child(2){
-  margin:26px 0 17px 0;
+  margin:15px 0 4px 0;
  }
 #footer>.footer_one{
-  padding:150px 0 0 185px;
+  padding:48px 0 0 154px;
   display:flex;
-  width:850px;
+  width:732px;
   font-weight:600;
   color:#3e3e3e;
  }
@@ -95,28 +109,28 @@ li{list-style: none;}
   display:flex;
   flex-direction:column;
   align-items:flex-start;
-  font-size:21px;
+  font-size:18px;
   }
 #footer>.footer_one>div>div{
   display:flex;
   font-weight:500;
-  margin-bottom:92px;
-  margin-top:50px;
+  margin-bottom:6px;
+  margin-top:24px;
  }
 #footer>.footer_one .footer_one_phone{
   margin:3px 0 0 23px;
  }
 #footer>.footer_one .footer_one_phone p:nth-child(1){
-  font-size:18px;
-  margin-bottom:10px;
+  font-size:16px;
+  margin-bottom:4px;
   color:#000;
   font-weight:600
  }
 #footer .footer_two{
-  padding:200px 0 0 38px;
+  padding:50px 0 0 38px;
   display:flex;
   justify-content:space-around;
-  width:960px;
+  width:905px;
  }
 #footer .footer_two a{
   color:#3e3e3e;
@@ -133,6 +147,21 @@ li{list-style: none;}
   color:#727272;
   
  }
+.footer_one>div:nth-child(2) .gs{
+  margin-top:10px
+}
+.footer_one>div>p:nth-child(3){
+  margin-top: 6px;
+}
+.footer_one>div>p{
+  color:#727272;
+  font-size:16px;
+  font-family:'宋体';
+  margin-bottom:6px;
+}
+.footer_one>div>div{
+ align-items:center
+}
 @media (max-width:1550px){
   #footer>.footer_one{
   padding:150px 0 0 60px;
@@ -178,7 +207,7 @@ li{list-style: none;}
   }
  #footer{
    flex-direction:column-reverse;
-   height:500px
+   height:400px
  }
 
  #footer .footer_two{

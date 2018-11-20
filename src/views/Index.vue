@@ -2,7 +2,7 @@
     <div id="Box_">
         <div id="banner">
             <div class="bann_img">
-                <el-carousel indicator-position="outside" @change='bann_change()' :interval="5000" >
+                <el-carousel indicator-position="outside" @change='bann_change($event)'  :interval="5000" > 
                     <el-carousel-item v-for="item in bannList" :key="item"><!---->
                       <img :src="item">
                     </el-carousel-item>
@@ -155,19 +155,22 @@ export default {
            $('#Model_shop').fadeOut();
            this.shop=null;
        },
-       bann_change(){
-           var i = $('.bann_img .el-carousel__container>div').index($('div.is-active.is-animating').next())
-           this.bann_index = i
+       bann_change(e){
+	   
+	   
+	   
+           this.bann_index = e
        },
        bann_textC(){
            let i = this.bann_index ;
-             if(i==-1){
+	   
+             if(i==0){
                 $('.bann_Tone').show()
                 window.innerWidth<=500?
                 $('.bann_Tone').animate({'top':'30px','height':'180px','font-size':'22px','left':'120px'},1500):
                 $('.bann_Tone').animate({'top':'210px','height':'310px','width':'400px'},1500)
-                console.log(window.innerWidth)
              }
+	     
              if(i==1){
                 $('.bann_Ttwo').show()
                 window.innerWidth<=500?
@@ -194,7 +197,7 @@ export default {
     mounted(){
         window.addEventListener('scroll',()=>{
             if(this.isOne==1){
-            if($("body,html").scrollTop()>1600){
+            if($("body,html").scrollTop()>1400){
                 this.onload();
                 this.isOne=0
             }}

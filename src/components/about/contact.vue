@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div class="contact_box">
         <img src="../../image/about/contact/ditu.png">
         <div>
@@ -23,23 +23,26 @@
        width:100%;
    }
    .contact_box>div{
-       height:350px;
+       height:220px;
        background:url(../../image/about/contact/beijing.png);
        display:flex;
        justify-content: center;
    }
    .contact_box>div>div{
+       color:#8d8d8d;
        width:222px;
        display: flex;
        flex-direction: column;
        align-items:center;
-       justify-content: space-around;
+       justify-content: center;
        font-size: 26px;
        font-weight: 600;
        text-align: center;
        margin: 0 50px;
    }
-
+   .contact_box>div>div img{
+     margin-bottom:36px;
+   }
 @media (max-width:1550px){
   .contact_box{
       width: 100%;
