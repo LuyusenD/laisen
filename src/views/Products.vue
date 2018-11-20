@@ -1,9 +1,9 @@
-<template>
+﻿<template>
     <div id="pro_box">
         <div class="shop_nav">
             <table></table>
-            <p>Smart Password  Lock Series</p>
-            <div>
+            <p> &nbsp;</p>
+            <div class="shop_nav_ul">
                 <el-button icon="el-icon-arrow-left" @click="min_nav_L_R(363,'+')" circle></el-button>
                 <div>
                     <ul>
@@ -67,19 +67,23 @@ export default{
                 case '全自动系列':
                 left = 0
                 this.view = 1
+                $('#shopList_box').css('height','590px')
                 break;
                 case '半自动系列':
                 left = left-20
                 this.view = 2
+                $('#shopList_box').css('height','590px')
                 break;
                 case '高档别墅系列':
-                window.innerWidth>=1820?left = left*2-40:left = left*2-34
-                console.log(left)
+                window.innerWidth>=1820?left = left*2-40:window.innerWidth<=1535?left = left*2-40:left = left*2-42
+                $('#shopList_box').css('height','1130px')
                 this.view = 3
                 break;
                 case '玻璃门系列':
-                window.innerWidth>=1820?left = left*3-62:left = left*3-50
+                window.innerWidth>=1820?left = left*3-62:left = left*3-63
                 this.view = 4
+                $('#shopList_box').css({'height':'1130px'})
+                
                 break;
             }
             $('.shopList').animate({'left':`-${left}px`});
@@ -133,6 +137,9 @@ export default{
 </script>
 
 <style>
+.shop_nav_ul{
+    padding: 20px 0 4px;
+}
 a{
     text-decoration:none;
 }
@@ -153,8 +160,8 @@ a{
     left:198px;
 }
 .shopList>div>div{
-      height:1130px;
-      width:1579px;
+      height:590px;
+      width:1920px;
       color:#fff;
       font-size:40px;
       text-align: center;
@@ -163,7 +170,7 @@ a{
    }
   .shopList span{
       position:relative;
-      top:100px;
+      top:25px;
       display:inline-block;
       left: 50%;
       margin-left: -72.5px;
@@ -176,7 +183,7 @@ a{
      display:flex;
      justify-content: center;
      width:100%;
-     margin-top:200px;
+     margin-top:50px;
      position:relative;
    }
   .shopList img{
@@ -222,7 +229,7 @@ a{
    }
   #pro_box>.shop_nav>div .el-button{display:none;}
   #pro_box>.shop_nav{
-      height:800px;
+      height:600px;
       background:url(../image/products/7.png);
       position: relative;
       color:#fff;
@@ -231,7 +238,7 @@ a{
       font-size:51px;
       width:400px;
       text-align: center;
-      margin:278px auto 254px;
+      margin:278px auto 169px;
    }
   #pro_box>.shop_nav ul{
       position:relative;
@@ -291,7 +298,7 @@ a{
   
   
   #shopList_box{
-      height:1130px;
+      height:600px;
       background:url(../image/products/9.png);
       position: relative;
       overflow: hidden;
@@ -319,9 +326,25 @@ a{
 
 
 
+@media (max-width:1820px){
+  .shopList>div>div{
+      width:1820px;
+   }
+}
+@media (max-width:1720px){
+  .shopList>div>div{
+      width:1720px;
+   }
+}
+@media (max-width:1620px){
+  .shopList>div>div{
+      width:1620px;
+   }
+}
 @media (max-width:1516px){
   #pro_box>.shop_nav>div{
       width:500px;
+      
       overflow: hidden;
       margin:0 auto;
       display:flex;
@@ -366,9 +389,13 @@ a{
  }
 
 @media (max-width:414px){
+
  #pro_box>.shop_list{
      height:736px;
   }
+ #pro_box>.shop_nav{
+     background:url(../image/products/7.png) no-repeat -690px;
+ }
  #pro_box>.shop_nav>div{
      width:414px;
    }

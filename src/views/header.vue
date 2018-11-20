@@ -126,7 +126,7 @@ li{list-style: none;}
  }
 #header>div:nth-child(1)>img{
   margin-top:36px;
-  margin-left:450px;
+  margin-left:150px;
  }
 #header>div:nth-child(1){
   position: absolute;

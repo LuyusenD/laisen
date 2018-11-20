@@ -41,82 +41,8 @@
         </div>
         <div class="shop_img">
             <!-- 介绍 -->
-            <div>
-                <span>{{cAs.type}}<br><a href='javascript:;'>{{cAs.typedown}}</a> </span>
-                <div class="transDown"></div>
-            </div>
-            <div>
                 <img :src="cAs.xImg_01">     
-            </div>
-            <div>
-                <img :src="cAs.xImg_02">     
-            </div>
-            <div>
-                <img :src="cAs.xImg_03">  
-            </div>
-            <div>
-                <img :src="cAs.xImg_04">      
-            </div>
-            <div class="cAs">
-                <p>产品参数</p>
-
-                <table>
-                    <tr>
-                        <td>密码键盘</td>
-                        <td>13位密码键盘</td>
-                        <td>指纹头</td>
-                        <td>半导体指纹头</td>
-                    </tr>
-                    <tr>
-                        <td>开门方式</td>
-                        <td>指纹、密码、钥匙、门卡、APP</td>
-                        <td>指纹头算法</td>
-                        <td>高清算法</td>
-                    </tr>
-                    <tr>
-                        <td>开门记录数</td>
-                        <td>500条开门记录数</td>
-                        <td>误识率</td>
-                        <td>≤0.0001%</td>
-                    </tr>
-                    <tr>
-                        <td>颜色</td>
-                        <td>经典黑</td>
-                        <td>拒识率</td>
-                        <td>≤0.01%</td>
-                    </tr>
-                    <tr>
-                        <td>尺寸</td>
-                        <td>395*755*95</td>
-                        <td>识别速度</td>
-                        <td>≤0.1秒</td>
-                    </tr>
-                    <tr>
-                        <td>外观材料</td>
-                        <td>锌合金</td>
-                        <td>用户数</td>
-                        <td>505组指纹</td>
-                    </tr>
-                    <tr>
-                        <td>应急电源</td>
-                        <td>USB接口</td>
-                        <td>密码</td>
-                        <td>24位虚位密码</td>
-                    </tr>
-                    <tr>
-                        <td>锁舌</td>
-                        <td>不锈钢实心</td>
-                        <td>清晰度</td>
-                        <td>500dpi</td>
-                    </tr>
-                    <tr>
-                        <td>应急开启</td>
-                        <td>叶片式蛇形空转钥匙</td>
-                        <td>工作温度</td>
-                        <td>-25℃-55℃</td>
-                    </tr>
-                </table>
-            </div>
+           
         </div>
     </div>
 </template>
@@ -282,7 +208,7 @@ export default {
       color:#5f5f5f;
    }
   .shop_img{
-      width:970px;
+      width:1200px;
       margin:0 auto;
    }
   .shop_img>div{
@@ -319,24 +245,7 @@ export default {
   .shop_img .cAs p{
       font-size:36px;
    }
-  table{
-       width:970px;
-       height:720px;
-       text-align:start;
-       box-sizing: border-box;
-       font-size:24px;
-   }
-  table td{
-       border:1px solid #a9a9a9;
-       padding-left:30px;
-   }
-  table tr{
-       background:#d4d4d4;
-       
-   }
-  table tr:nth-child(2n){
-       background:#ffffff;
-   }
+  
   
 
 @media (max-width:1310px){
@@ -416,7 +325,8 @@ export default {
  }
  .content .C_one>div:nth-child(2) ul{
        width:100%;
-       padding:0 0 0 10px
+       padding:0 0 0 10px;
+       box-sizing: border-box;
    }
  .C_one>div:nth-child(2) ul>li:first-child,.C_one>div:nth-child(2) ul>li:last-child{
        display:none;
@@ -427,16 +337,14 @@ export default {
  .C_two,a{
      margin:0 auto;
  }
+ .C_two>span{
+    position: relative;
+    top: -34px;
+ }
  .shop_img,.shop_img img{
      width:100% !important;
  }
- table{
-     width:100%;
-     font-size: 14px
- }
- table td{
-     padding:0 0 0 6px
- }
+ 
  .cAs p{
      font-size: 26px
  }

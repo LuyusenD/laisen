@@ -1,5 +1,5 @@
 <template>
-     <div class="SL_V">
+     <div class="SL_V" style="height: 1000px;">
         <span class="span_after">SL_V 系列</span>
         <div class="shop_img">
             <div class="img_bot"></div>
@@ -41,10 +41,13 @@
 
 <style scoped>
     .SL_V>span{top:20px;}
-    .SL_V{background:black}
+    .SL_V{background:linear-gradient( #000 1%,#fff 50%);}
     .SL_V>.shop_img{
         background: url(../../image/products/villa/11.png);
         margin-top: 40px;
+    }
+    .SLV_ img{
+        height: 750px;
     }
     .shop_img>.img_bot{
         background:#FFCE75;
@@ -80,7 +83,7 @@
         width: 930px;
         height: 730px;
         position: absolute;
-        background: rgba(0, 0, 0, .7);
+        background: rgba(255, 201, 116, .7);
         left: 50%;
         margin-left: -465px;
         top: 185px;

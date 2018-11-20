@@ -17,7 +17,7 @@
                 <div>
                     <img src="../../image/products/half_automatic/SL-K11da.png">
                 </div>
-                <div>
+                <div style="text-align:center">
                     安防系统 五大解锁功能
                     <div class="shop_two_img">
                         <div>
@@ -38,6 +38,7 @@
 </template>
 
 <style scoped>
+  *{font-size:18px !important}
   p{
       padding:0;
       margin:0;
@@ -83,7 +84,7 @@
   }
   .shop_two{
       background:url(../../image/products/half_automatic/beijing.png);
-      height:900px;
+      height:600px;
       display:flex;
       justify-content: center
   }
@@ -91,12 +92,12 @@
       padding:104px 0 0 76px;
       font-family:'方正兰亭超细黑简体','宋体','黑体';
       font-size:56px;
-      width:904px;
+      width:670px;
   }
   .shop_two .shop_two_img>div{
       display:flex;
       justify-content: space-around;
-      top:138px;
+      top:91px;
   }
   .shop_two .shop_two_img>div:nth-child(2){
       justify-content: space-between;
@@ -130,7 +131,8 @@
         height:100px;
     }
     .shop_two>div:nth-child(2){
-      padding:104px 0 0 76px;
+      text-align: center;
+      padding:67px 0 0 76px;
       font-family:'方正兰亭超细黑简体','宋体','黑体';
       font-size:46px;
       width:904px;

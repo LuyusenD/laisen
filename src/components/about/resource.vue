@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div class="resource">
         <div class="res_bann">
             <div>
@@ -76,6 +76,7 @@
       width:50%;
       background:#fec836;
       color:#fff3d3;
+	
   }
   .content>div:nth-child(2){
       padding:50px;
@@ -120,7 +121,7 @@
   .content>div,.res_table>table,tr{
       width: 100%;
       font-size: 18px!important;
-      margin-top:6px;
+      margin-top:0px;
   }
   .content>div{
         box-sizing: border-box;

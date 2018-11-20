@@ -38,7 +38,7 @@
 <style scoped>
     
     .SL_V>span{top:20px;}
-    .SL_V{background:black}
+    .SL_V{background:linear-gradient( #000 1%,#fff 50%);}
     .SL_V>.shop_img{
         background: url(../../image/products/glass/12.png);
         margin-top: 40px;
@@ -53,6 +53,9 @@
     .SL_V>.SLV_text{
         position:absolute;
         
+    }
+    .SLV_ img{
+        height: 750px;
     }
     .SLV_{
         display: flex;

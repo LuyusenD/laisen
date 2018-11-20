@@ -1,7 +1,7 @@
-<template>
+﻿<template>
     <div>
         <div class="company">
-            <div class="text" style="height:283px">
+            <div class="text" style="height:200px">
                 <table></table>
                 <p class="text_p">SALIFELINK</p>
                 <p>高端指纹典范</p>
@@ -106,7 +106,7 @@ export default{
     mounted(){
          window.addEventListener('scroll',()=>{
             if(this.isOne==1){
-            let top = 800;
+            let top = 500;
             window.innerWidth<600?top=500:''
 
             if($("body,html").scrollTop()>top){
@@ -123,11 +123,11 @@ export default{
 
 <style scoped>
 .company{
-    height:800px;
+    height:600px;
     background:url(../../image/about/company/bj.png)
  }
 .company .text{
-    font-size:36px;
+    font-size:26px;
     color:#fff;
     width: 250px;
     text-align: center;
@@ -141,8 +141,8 @@ export default{
     height:4px;
     position:absolute;
     background:#fff;
-    top:80px;
-    left: 80px;
+    top: 56px;
+    left: 84px;
     
  }
 .company .img{
@@ -197,7 +197,7 @@ export default{
     background:#e7e7e7;
   }
 .body_flex>div:nth-child(2)>p{
-    margin:50px 0 10px 20px;
+    margin:42px 0 10px 20px;
  }
 .body_flex>div:nth-child(2)>p.after::after{
     top:-10px;
@@ -298,7 +298,7 @@ export default{
         top: 59px;
     }
     .company{
-        height:1194px;
+        height:1084px;
     }
     .company>.img{
         display: block;
@@ -307,6 +307,7 @@ export default{
         width:414px;
     }
     .company>.img .count{
+	top:-4px;
         width:414px;
         margin-left: 0;
         height:auto;
@@ -325,7 +326,7 @@ export default{
     }
     .body_flex>div p{
       margin:100px auto 0;
-      width:390px;
+      width:338px;
       position: relative;
     }
     .body_list>div{

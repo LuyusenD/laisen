@@ -10,10 +10,10 @@
             </div>
             <div>
                 <img src="../../image/products/automatic/shop.png">
-                <div class="shop_text">
+                <!-- <div class="shop_text">
                     <p>真正的手机智能APP 每周自动升级</p>
                     <span>开锁过程一目了然 安全可靠 蓝牙传输 距离短  更安全  耗能低</span>
-                </div>
+                </div> -->
             </div>
             
         </div>

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div id="About_box">
         <div class="bann">
             <img src="../image/about/bananer.png">
@@ -57,20 +57,20 @@ export default{
                         $('#import').css('height','auto')
                         break;
                     case '人力资源':
-                        goLeft<=1024?goLeft=goLeft+18:''
+                        goLeft<=1024?goLeft=goLeft+21:''
                         
-                        bann.animate({'left':`-${goLeft-17}px`})
+                        bann.animate({'left':`-${goLeft-21}px`})
                         $('#import').css('height','920px')
                         break;
                     case '联系我们':
-                        goLeft<=1024?goLeft=goLeft+17:''
-                        bann.animate({'left':`-${2*goLeft-34}px`})
-                        $('#import').css('height','920px')
+                        goLeft<=1024?goLeft=goLeft+21:''
+                        bann.animate({'left':`-${2*goLeft-42}px`})
+                        $('#import').css('height','800px')
                         break;
                     case '客户留言':
-                        goLeft<=1024?goLeft=goLeft+17:''
-                        bann.animate({'left':`-${3*goLeft-51}px`})
-                        $('#import').css('height','850px')
+                        goLeft<=1024?goLeft=goLeft+21:''
+                        bann.animate({'left':`-${3*goLeft-61}px`})
+                        $('#import').css('height','600px')
                         break;
                 }
             }
@@ -157,6 +157,9 @@ export default{
    }
  }
 @media (max-width:414px){
+#import .import_list{
+    width:411%;
+}
   .btn_nav_box{
       align-items: center
   }

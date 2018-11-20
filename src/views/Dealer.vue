@@ -112,20 +112,21 @@
 }
 .content>div{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 .content>div>div img{
     margin-right:20px;
 }
 .content>div>div{
-    width:430px;
+    width:365px;
     height:144px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
     color:#fff;
-    font-size: 22px;
+    font-size: 20px;
+    margin: 0 20px;
 }
 
 @media (max-width:1336px){

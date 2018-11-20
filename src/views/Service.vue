@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div id="service_Box">
         <div class="bann" @mouseover="start()">
             <img src="../image/service/1.png">
@@ -37,8 +37,7 @@
             <div>
                 <div><img src="../image/service/yuyue.png">时间可预约</div>
                 <div><img src="../image/service/tunhuo.png">无忧退货</div>
-            </div>
-            <div>
+            
                 <div><img src="../image/service/30anzhuang.png">30天免费安装</div>
                 <div><img src="../image/service/kefu.png">售后客服</div>
             </div>
@@ -58,7 +57,7 @@ export default{
             if(!this.Start){return}
             let Topdown = 280;
             let WindowWidth = window.innerWidth;
-            WindowWidth>=1600?Topdown=400:WindowWidth>=1024?Topdown=280:WindowWidth>=414?Topdown=80:''
+            WindowWidth>=1600?Topdown=210:WindowWidth>=1024?Topdown=280:WindowWidth>=399?Topdown=80:''
             $('.bann>div>div').css({'margin-top':`${Topdown}px`,'opacity':'1'})
             $('.bann>div>p').css({'margin-top':'20px','opacity':'1'})
             
@@ -71,6 +70,13 @@ export default{
 </script>
 
 <style scoped>
+.serve img{
+    height:165px;
+    width:165px;
+}
+.serve>div{
+    margin:0 auto;
+}
 p{
     padding:0;
     margin:0;
@@ -95,15 +101,7 @@ p{
     opacity: 0;
     position: relative;
  }
-.bann>div div:after{
-    content: '';
-    width: 120px;
-    height:4px;
-    background:#fff;
-    position:absolute;
-    top: -80px;
-    left: 150px;
- }
+
 .bann>div p{
     font-size: 26px;
     width:560px;
@@ -141,7 +139,7 @@ p{
     left:100px;
  }
 .body,.serve{
-    height:800px;
+    height:600px;
     background:url(../image/service/2.png);
     display: flex;
     flex-direction:column;
@@ -149,6 +147,7 @@ p{
     align-items: center;
  }
  .serve{
+     flex-direction:row;
      justify-content: flex-start;
  }
 .body>div{
@@ -160,7 +159,7 @@ p{
  }
 .body>div>div{
     width:596px;
-    height:236px;
+    height:170px;
     display: flex;
     align-items: center;
     padding:30px;
@@ -182,7 +181,7 @@ p{
     margin-top:50px;
  }
 .serve>div>div{
-    width:486px;
+    width: 345px;
     height:330px;
     display: flex;
     justify-content: center;
@@ -264,12 +263,19 @@ p{
     .body>div>div>div:nth-child(1){
         margin-right: 30px;
     }
-    .serve{
-        height:850px;
+    .serve>div>div>img{
+        margin-bottom:10px
     }
+    .serve{
+        height:666px;
+    }
+    
     .body>div,.serve>div{
         flex-direction: column;
         height:400px;
+    }
+    .serve>div{
+        height:600px;
     }
     .serve>div>div{
         width:300px;
@@ -277,6 +283,7 @@ p{
     }
     .serve>div img{
         width:100px;
+	height:100px
     }
     
 }

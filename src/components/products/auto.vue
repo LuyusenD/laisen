@@ -1,5 +1,5 @@
 <template>
-    <div class="SL_A">
+    <div class="SL_A" style="overflow:hidden">
         <span class="span_after">SL_A 系列</span>
         <div class="shop_img">
             <div>

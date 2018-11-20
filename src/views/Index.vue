@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div id="Box_">
         <div id="banner">
             <div class="bann_img">
@@ -41,10 +41,10 @@
                 </div>
                 <el-carousel :interval="4000" type="card" >
                     <el-carousel-item v-for="(i,index) in shopBannList"  :key="index">
-                        <img :src="i.img"  style="height:350px;"/>
+                        <img :src="i.img"  style="height:280px;"/>
                         <p>{{i.title}}</p>
                         <p>{{i.type}}</p>
-                        <a @click="Model_show(i.id)">了解更多》</a>
+                        <router-link :to="'/details/'+i.id">了解更多》</router-link> <!--@click="Model_show(i.id)"-->
                     </el-carousel-item>
                 </el-carousel>
             </div>
@@ -75,31 +75,29 @@ import banner_three from '../image/index/banner/7.png'
 import banner_four from '../image/index/banner/8.png'
 import grid_one from '../image/index/grid/4.png'
 import grid_two from '../image/index/grid/5.png'
-import grid_three from '../image/index/grid/6.png'
-import grid_four from '../image/index/grid/3.png'
 export default {
     data(){
       return {
           isOne:1,
           bannList:[banner_one,banner_two,banner_three,banner_four],
           canvasId:['canv1','canv2','canv3'],
-          gridList:[grid_one,grid_two,grid_three,grid_four],
+          gridList:[grid_one,grid_two],
           shopBannList:[
               {id:1,img:shop_one,title:'SL-A6',type:'全自动系列'},
-              {id:2,img:shop_two,title:'SL-D18',type:'玻璃锁'},
-              {id:3,img:shop_three,title:'SL-K12',type:'半自动系列'}
+              {id:9,img:shop_two,title:'SL-D18',type:'玻璃锁'},
+              {id:7,img:shop_three,title:'SL-K12',type:'半自动系列'}
           ],
           shop:null,
           bann_index:-1
       }
     },
     methods:{
-       load(elem,val,size,text,tw=null,Tw=124,Th=178){
+       load(elem,val,size,text,tw=null,Tw=124,Th=145){
         var ctx = document.getElementById(elem).getContext("2d");
          ctx.beginPath();
          ctx.strokeStyle = "#aaa";
-         ctx.arc(150,150,150,0,2*Math.PI);
-         ctx.lineWidth = 15;
+         ctx.arc(130,130,120,0,2*Math.PI);
+         ctx.lineWidth = 10;
          ctx.stroke();
          var start = -90;
          var end = -90;
@@ -120,8 +118,8 @@ export default {
          ctx.clearRect(0,0,500,400); 
          ctx.beginPath();
          ctx.strokeStyle = "rgba(0,0,0,0)";
-         ctx.arc(160,160,150,0,2*Math.PI);
-         ctx.lineWidth = 15;
+         ctx.arc(130,130,120,0,2*Math.PI);
+         ctx.lineWidth = 10;
          ctx.stroke();
          num += 1;
          if(num > 100){num=100}
@@ -130,18 +128,18 @@ export default {
          elem=='canv2'?ctx.fillText(value+'+',Tw,Th):elem=='canv1'?ctx.fillText(value,Tw,Th):ctx.fillText(value+'%',Tw,Th);
          ctx.beginPath();
          end += 3.6;
-         ctx.arc(160,160,150,start*Math.PI/180,end*Math.PI/180);
+         ctx.arc(130,130,120,start*Math.PI/180,end*Math.PI/180);
          ctx.strokeStyle = "#fec836";
          ctx.stroke();
          ctx.font = "24px 宋体"; 
-         ctx.fillText(text,110,380);
+         ctx.fillText(text,80,320);
             if(num == size){clearInterval(t)}
         },30);
        },
        onload(){
-           this.load("canv1",'NO.1',75,"行业品质",null,104)
-           this.load("canv2",100000,61,"用户选择",90,107)
-           this.load("canv3",100,100,"用户好评",122,129)
+           this.load("canv1",'NO.1',75,"行业品质",null,90)
+           this.load("canv2",100000,61,"用户选择",60,80)
+           this.load("canv3",100,100,"用户好评",94,99)
        },
        Model_show(Id){
            $('#Model_shop').fadeIn()
@@ -167,26 +165,26 @@ export default {
                 $('.bann_Tone').show()
                 window.innerWidth<=500?
                 $('.bann_Tone').animate({'top':'30px','height':'180px','font-size':'22px','left':'120px'},1500):
-                $('.bann_Tone').animate({'top':'210px','height':'400px'},1500)
+                $('.bann_Tone').animate({'top':'210px','height':'310px','width':'400px'},1500)
                 console.log(window.innerWidth)
              }
              if(i==1){
                 $('.bann_Ttwo').show()
                 window.innerWidth<=500?
                 $('.bann_Ttwo').animate({'top':'70px','height':'170px','width':'170px','font-size':'24px','left':'150px'},1500):
-                $('.bann_Ttwo').animate({'top':'230px','height':'400px'},1500)
+                $('.bann_Ttwo').animate({'top':'230px','height':'270px'},1500)
              }
              if(i==2){
                 $('.bann_Tthree').show()
                 window.innerWidth<=500?
                 $('.bann_Tthree').animate({'top':'230px','height':'170px','width':'160px','font-size':'22px','left':'220px'},1500):
-                $('.bann_Tthree').animate({'top':'220px','height':'400px'},1500)
+                $('.bann_Tthree').animate({'top':'220px','height':'270px','width':'300px'},1500)
              }
              if(i==3){
                 $('.bann_Tfore').show()
                 window.innerWidth<=500?
                 $('.bann_Tfore').animate({'top':'100px','height':'170px','width':'180px','font-size':'22px','left':'180px'},1500):
-                $('.bann_Tfore').animate({'top':'230px','height':'400px'},1500)
+                $('.bann_Tfore').animate({'top':'230px','height':'270px','width':'350px'},1500)
              }
        }
     },
@@ -196,7 +194,7 @@ export default {
     mounted(){
         window.addEventListener('scroll',()=>{
             if(this.isOne==1){
-            if($("body,html").scrollTop()>1900){
+            if($("body,html").scrollTop()>1600){
                 this.onload();
                 this.isOne=0
             }}
@@ -238,17 +236,17 @@ li.is-active .el-carousel__button{
     display:none;
     }
 .shop_bann .el-carousel__container{
-    margin-left:100px;
+    margin-left:114px;
  }
 .bann_img .el-carousel__container,.bann_img .el-carousel{
-    height:800px
+    height:600px
   }
 .shop_bann_item .el-carousel__container{
-    height:530px;
+    height:460px;
   }
 .shop_bann_item .el-carousel__item{
-    width:300px;
-    height:500px;
+    width:270px;
+    height:430px;
 }
 @media (max-width:860px){
  .shop_bann .el-carousel__container{
@@ -289,7 +287,7 @@ p,ul,li{
  }
 #banner,.shop_bann,.counter,.counter_all{
     width:100%;
-    height:800px;
+    height:600px;
  }
 .grid{
     display:flex;
@@ -322,7 +320,7 @@ p,ul,li{
     font-size:30px;
     font-weight:500;
     color:#fff;
-    padding: 94px 0 49px 0;
+    padding: 65px 0 49px 0;
     width:280px;
     margin-left:-140px;
     font-family:'AkzidenzGroteskBQ';
@@ -341,7 +339,7 @@ p,ul,li{
   transition:.5s;
  }
 .counter .counter_all>canvas{
-    margin:288px 104px 0;
+    margin:195px 104px 0;
  }
 .shop_bann{
     background:url(../image/index/beiji.png);
@@ -385,14 +383,14 @@ p,ul,li{
     box-sizing:border-box;
  }
 .shop_bann .shop_bann_con{
-    height:215px;
+    height:159px;
     display:flex;
     align-items:center;
     flex-flow:column wrap;
     font-size:22px;
     color:#fff;
     position:relative;
-    top:80px;
+    top:46px;
  }
 .shop_bann .shop_bann_con span{
     position:relative;
@@ -541,7 +539,7 @@ p,ul,li{
     cursor: pointer;
  } 
 .shop_bann,.shop_bann .shop_bann_item{
-    height:667px ;
+    height:565px ;
  }
 .shop_bann .shop_bann_con li{
     display:none;
@@ -551,6 +549,10 @@ p,ul,li{
     margin-top:30px;
  }
 
+.shop_bann .shop_bann_con span{
+    top:-50px
+
+ }
 
 
 
