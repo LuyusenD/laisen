@@ -1,6 +1,12 @@
 ﻿<template>
     <div class="Dealer_box">
-        <img src="../image/about/dealer/13.png">
+        <div class="bann" @mouseover="start()">
+            <img src="../image/about/dealer/13.png">
+            <div>
+                <div>COOPERATION</div>
+                <p>合作共赢</p>
+            </div>
+        </div>
         <div class="nav">
             <li class="active">公司简介<i></i></li>
         </div>
@@ -46,10 +52,61 @@
     </div>
 </template>
 
+<script>
+import $ from '../../public/js/jquery-3.2.1.js'
+export default{
+    
+    data(){return {
+        Start:true
+     }
+    },
+    created(){},
+    methods:{
+        start(){
+            if(!this.Start){return}
+            let Topdown = 280;
+            let WindowWidth = window.innerWidth;
+            WindowWidth>=1600?Topdown=210:WindowWidth>=1024?Topdown=280:WindowWidth>=399?Topdown=80:''
+            $('.bann>div>div').css({'margin-top':`${Topdown}px`,'opacity':'1'})
+            $('.bann>div>p').css({'margin-top':'20px','opacity':'1'})
+            
+            /*280*/
 
+            this.Start=false
+        }
+    }
+}
+</script>
 
 
 <style scoped>
+
+.bann{position: relative;}
+.bann>div{
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 36px;
+    color: #fff;
+ }
+.bann>div div{
+    font-size: 50px;
+    width:370px;
+    margin: 0 auto 0;
+    transition: 2s;
+    opacity: 0;
+    position: relative;
+ }
+
+.bann>div p{
+    font-size: 46px;
+    width: 185px;
+    margin: -50px auto 0;
+    transition: 3s;
+    opacity: 0;
+ }
 .after:after{
       content: '';
       background:#fec836;

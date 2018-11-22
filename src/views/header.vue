@@ -53,6 +53,8 @@
 <script>
 import imgWX from '@/image/header/weixinc.png'
 import imgQQ from '@/image/header/qqc.png'
+import $ from '../../public/js/jquery-3.2.1.js'
+import Vuex from '@/Vuex.js'
 export default{
     data(){return{
   	pro:null,
@@ -61,6 +63,8 @@ export default{
     }},
     created(){
         this.pro = this.$route.path;
+        Vuex.state.title = this.$route.path
+        console.log(Vuex.state.title)
     },
     mounted(){
         let i = this.list.indexOf(this.pro);
@@ -72,10 +76,10 @@ export default{
         Imgover(e,type){
   	     this.imgUrl = e.target.src;
   	     type=='qq'?e.target.src=imgQQ:e.target.src=imgWX
-	},
-	Imgout(e){
-	     e.target.src=this.imgUrl
-	},
+        },
+        Imgout(e){
+            e.target.src=this.imgUrl
+        },
         phone_nav(){
             $('.iphone_nav').slideToggle()
         },
@@ -92,6 +96,7 @@ export default{
           }
         },
         actives(e){
+          console.log(e)
           $('.nav_ul>li>a.active').parent().children().first().animate({'margin-top':'0px'})
           e.target.parentElement.children[0].style.marginTop = -72+'px'
         }
@@ -140,13 +145,13 @@ li{list-style: none;}
  }
 #header{
   width:100%;
-  height:120px;
+  height:100px;
   background:#fec836;
   font-size:20px;
   position:relative;
  }
 #header>div:nth-child(1)>img{
-  margin-top:36px;
+  margin-top:25px;
   margin-left:150px;
  }
 #header>div:nth-child(1){
@@ -173,7 +178,7 @@ li{list-style: none;}
   color:#fff;
  }
 #header>div>ul>li{
-  margin-top:60px; 
+  margin-top:45px; 
   margin-right:60px;
   float:left;
   font-weight: 700;
@@ -196,7 +201,7 @@ li{list-style: none;}
  } 
  .En_Cn{
    position:absolute;
-   top:16px;
+   top:7px;
    right:130px
  }
  .En_Cn a:nth-child(2){

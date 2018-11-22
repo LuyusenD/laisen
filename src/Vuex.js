@@ -151,7 +151,8 @@ export default new Vuex.Store({
           'lImg_03':SL_D18_3,
           'xImg_01':SL_D18_4,
           },
-        ]
+        ],
+      title:'/'
     },
     mutations: {
   

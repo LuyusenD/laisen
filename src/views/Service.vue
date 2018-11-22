@@ -19,7 +19,7 @@
                 </div>
                 <div>
                     <div><img src="../image/service/anquan.png"></div>
-                    <div>一年免费质保</div>
+                    <div>两年免费质保</div>
                 </div>
             </div>
             <div>
@@ -46,6 +46,7 @@
 </template>
 
 <script>
+import $ from '../../public/js/jquery-3.2.1.js'
 export default{
     data(){return {
         Start:true

@@ -1,6 +1,6 @@
 ﻿<template>
      <div class="SL_V" style="height: 1000px;">
-        <span class="span_after">SL_V 系列</span>
+        <span class="span_after">SL-V 系列</span>
         <div class="shop_img">
             <div class="img_bot"></div>
         </div>

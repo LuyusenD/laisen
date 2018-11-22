@@ -1,6 +1,6 @@
 ﻿<template>
     <div class="SL_K">
-        <span class="span_after">SL_K 系列</span>
+        <span class="span_after">SL-K 系列</span>
         <div class="shop_img">
             <div>
                 <a href="/details/4" target="_blank"><img src="../../image/products/half_automatic/SL-K10.png"></a>

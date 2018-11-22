@@ -47,6 +47,7 @@ import automatic from '../components/products/automatic.vue'
 import halfAutomatic from '../components/products/halfAutomatic.vue'
 import villa from '../components/products/villa.vue'
 import glass from '../components/products/glass.vue'
+import $ from '../../public/js/jquery-3.2.1.js'
 export default{
     data(){return {
         view:1,

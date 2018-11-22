@@ -50,7 +50,7 @@
 
 <script>
 import Vuex from '@/Vuex.js'
-
+import $ from '../../public/js/jquery-3.2.1.js'
 export default {
     data(){return{
         cAs:{},
@@ -59,6 +59,7 @@ export default {
     created(){
         let id = this.$route.params.id
         const _this = this;
+        console.log(Vuex.state)
         Vuex.state.details.map((obj)=>{
             if(obj.id==id){
                 _this.cAs = obj

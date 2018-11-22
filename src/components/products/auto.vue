@@ -1,6 +1,6 @@
 ﻿<template>
     <div class="SL_A" style="overflow:hidden">
-        <span class="span_after">SL_A 系列</span>
+        <span class="span_after">SL-A 系列</span>
         <div class="shop_img">
             <div>
                 <a href="/details/1" target="_blank"><img src="../../image/products/automatic/SL-A6.png"></a>

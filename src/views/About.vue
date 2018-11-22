@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import $ from '../../public/js/jquery-3.2.1.js'
 import company from '../components/about/company.vue'
 import resource from '../components/about/resource.vue'
 import contact from '../components/about/contact.vue'

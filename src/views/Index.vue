@@ -10,7 +10,7 @@
                 <div class="bann_text">
                     <div class="bann_Tone">
                         INTELLIGENT <br> LIFE <br> WITH YOU
-                        <p>莱森智联 懂你更懂家</p>
+                        <p>森莱智联 懂你更懂家</p>
                     </div> 
                     <div class="bann_Ttwo">
                         ARTISANAL <br> QUALITY
@@ -75,6 +75,7 @@ import banner_three from '../image/index/banner/7.png'
 import banner_four from '../image/index/banner/8.png'
 import grid_one from '../image/index/grid/4.png'
 import grid_two from '../image/index/grid/5.png'
+import $ from '../../public/js/jquery-3.2.1.js'
 export default {
     data(){
       return {
@@ -215,6 +216,9 @@ export default {
 }
 </script>
 <style>
+.el-carousel{
+    width:100%;
+}
 li.is-active .el-carousel__button{
     background:#fec836 !important;
     }
